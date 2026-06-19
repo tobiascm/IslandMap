@@ -58,7 +58,7 @@ HIGHLIGHTS = {
     8: "Whale Watching · Beach Baths · Tröllaskagi · Reykjafoss",
     9: "Kolugljúfur · Grábrók · Hraunfossar/Barnafoss",
     10: "Glymur · Reykjavík-Stadtrundgang",
-    11: "Þverfellshorn · Reykjanes · Grindavík · Lavafeld · Küstentour",
+    11: "Þverfellshorn · Grindavík · Lavafeld · Küstentour",
 }
 
 # a few waypoint names need a more specific display name than their raw
