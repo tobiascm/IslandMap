@@ -33,9 +33,9 @@ from adjustText import adjust_text
 # --------------------------------------------------------------------------
 # configuration
 # --------------------------------------------------------------------------
-TRACK_GPX = "island_track.gpx"
+TRACK_GPX = "data/island_track.gpx"
 ACT_GPX = "data/Islandreise_2026_Aktivitaeten_Wegpunkte.gpx"
-OUTPUT = "island_poster.png"
+OUTPUT = "output/island_poster.png"
 
 ZOOM = 8
 BG = "#0c1626"            # poster background (dark navy)
