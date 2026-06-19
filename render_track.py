@@ -20,13 +20,22 @@ for track in gpx.tracks:
 transformer = Transformer.from_crs("EPSG:4326", "EPSG:3857", always_xy=True)
 xs, ys = transformer.transform(lons, lats)
 
-fig, ax = plt.subplots(figsize=(12, 16), dpi=200)
-ax.plot(xs, ys, color="#e3120b", linewidth=1.8, alpha=0.9)
-
 margin_x = (max(xs) - min(xs)) * 0.08
 margin_y = (max(ys) - min(ys)) * 0.05
-ax.set_xlim(min(xs) - margin_x, max(xs) + margin_x)
-ax.set_ylim(min(ys) - margin_y, max(ys) + margin_y)
+xlim = (min(xs) - margin_x, max(xs) + margin_x)
+ylim = (min(ys) - margin_y, max(ys) + margin_y)
+
+width = xlim[1] - xlim[0]
+height = ylim[1] - ylim[0]
+fig_height = 14
+fig_width = fig_height * width / height
+
+fig, ax = plt.subplots(figsize=(fig_width, fig_height), dpi=200)
+ax.plot(xs, ys, color="#e3120b", linewidth=1.8, alpha=0.9)
+
+ax.set_xlim(xlim)
+ax.set_ylim(ylim)
+ax.set_aspect("equal")
 
 cx.add_basemap(ax, source=cx.providers.OpenStreetMap.Mapnik, zoom="auto")
 
