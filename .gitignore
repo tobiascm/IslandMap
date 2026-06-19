@@ -1,0 +1,6 @@
+# generated basemap tile cache (re-downloaded on demand)
+data/_basemap_*.npz
+# scratch / preview images
+_crop_*.png
+_preview_*.png
+__pycache__/
