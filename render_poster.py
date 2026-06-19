@@ -197,8 +197,12 @@ def read_activities():
             lat = sum(m[1] for m in members) / len(members)
             lon = sum(m[2] for m in members) / len(members)
             x, y = WGS84_TO_MERC.transform(lon, lat)
-            names = [m[0].split(" / ")[0].split(" – ")[0] for m in members]
-            labels.append((day, " · ".join(names), x, y, len(members)))
+            if len(members) > 1 and any("Reykjavík" in m[0] for m in members):
+                label = "Reykjavík"
+            else:
+                names = [m[0].split(" / ")[0].split(" – ")[0] for m in members]
+                label = " · ".join(names)
+            labels.append((day, label, x, y, len(members)))
     return labels
 
 
@@ -250,7 +254,7 @@ def main():
     for day, label, x, y, members in activities:
         wrapped = textwrap.fill(label, width=24) if members > 1 else label
         ha = "left" if x >= cx_mid else "right"
-        txt = ax.text(x, y, wrapped, fontsize=8.0, color="white", ha=ha, va="center",
+        txt = ax.text(x, y, wrapped, fontsize=10, color="white", ha=ha, va="center",
                       zorder=7,
                       bbox=dict(boxstyle="round,pad=0.28", fc="#0d1726ee",
                                 ec=PALETTE[day - 1], lw=1.0))
@@ -297,9 +301,9 @@ def main():
                  color=text_color_for(col), ha="center", va="center", zorder=4)
         pan.text(0.205, cy - 0.018, f"TAG {day}", fontsize=14, fontweight="bold",
                  color="white", ha="left", va="center", zorder=4)
-        wrapped = textwrap.fill(HIGHLIGHTS[day], width=42)
-        pan.text(0.205, cy + 0.016, wrapped, fontsize=8.2, color="#c3cee0",
-                 ha="left", va="center", zorder=4, linespacing=1.25)
+        wrapped = textwrap.fill(HIGHLIGHTS[day], width=38)
+        pan.text(0.205, cy + 0.016, wrapped, fontsize=10, color="#c3cee0",
+                 ha="left", va="center", zorder=4, linespacing=1.2)
 
     fig.savefig(OUTPUT, dpi=150, facecolor=BG)
     print(f"Saved {OUTPUT}")
