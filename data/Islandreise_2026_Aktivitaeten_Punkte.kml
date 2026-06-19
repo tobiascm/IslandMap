@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Islandreise 2026 – Aktivitäten</name>
+    <Placemark>
+      <name>Tag 01 – Reykjadalur</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-08&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wanderung&lt;br/&gt;Wanderung durch das Geothermaltal zum warmen Fluss.</description>
+      <Point>
+        <coordinates>-21.2111691,64.0218948,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 01 – Kerið</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-08&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Natur&lt;br/&gt;Rundgang am Vulkankrater mit Kratersee.</description>
+      <Point>
+        <coordinates>-20.8851466,64.0412785,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 01 – Geysir / Strokkur</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-08&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Geothermalgebiet&lt;br/&gt;Ausbrüche des Strokkur und Rundgang durch das Geothermalfeld.</description>
+      <Point>
+        <coordinates>-20.3007210,64.3127094,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 01 – Gullfoss</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-08&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wasserfall&lt;br/&gt;Besichtigung des Wasserfalls von mehreren Aussichtspunkten.</description>
+      <Point>
+        <coordinates>-20.1244322,64.3261810,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 02 – Seljalandsfoss</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-09&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wasserfall&lt;br/&gt;Besichtigung und Weg hinter dem Wasservorhang.</description>
+      <Point>
+        <coordinates>-19.9937851,63.6157167,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 02 – Gljúfrabúi</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-09&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wasserfall&lt;br/&gt;Gang durch die Felsspalte zum versteckten Wasserfall.</description>
+      <Point>
+        <coordinates>-19.9864486,63.6208631,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 02 – Skógafoss / Skógá-Wanderung</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-09&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wanderung&lt;br/&gt;Skógafoss und lange Wanderung oberhalb des Wasserfalls entlang der Skógá.</description>
+      <Point>
+        <coordinates>-19.5109844,63.5270996,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 03 – Fjaðrárgljúfur</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-10&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wanderung&lt;br/&gt;Wanderung entlang der Aussichtspunkte der Schlucht.</description>
+      <Point>
+        <coordinates>-18.1685000,63.7795518,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 03 – Systrafoss</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-10&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Kurzer Stopp&lt;br/&gt;Nur kurzer Halt oder Blick aus dem Fahrzeug.</description>
+      <Point>
+        <coordinates>-18.0602872,63.7876503,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 03 – Dverghamrar</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-10&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Natur&lt;br/&gt;Kurzer Rundgang an den Basaltsäulen.</description>
+      <Point>
+        <coordinates>-17.8612650,63.8492447,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 03 – Lómagnúpur</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-10&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Aussichtspunkt&lt;br/&gt;Aussichts- und Fotostopp an der großen Felswand.</description>
+      <Point>
+        <coordinates>-17.4762678,63.9569722,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 03 – Skaftafell – Gletscherwanderung</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-10&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wanderung&lt;br/&gt;Lange Wanderung entlang des Gletschers.</description>
+      <Point>
+        <coordinates>-16.9679636,64.0145915,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 04 – Hofskirkja</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-11&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Kultur&lt;br/&gt;Besichtigung der historischen Torfkirche und Umgebung.</description>
+      <Point>
+        <coordinates>-16.7068419,63.9069579,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 04 – Gletscherwanderung / Eisklettern</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-11&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wanderung&lt;br/&gt;Geführte Gletscherwanderung mit Eisklettern.</description>
+      <Point>
+        <coordinates>-16.8023380,63.9679585,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 04 – Jökulsárlón</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-11&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Gletscherlagune&lt;br/&gt;Längere Besichtigung der Lagune mit Eisbergen.</description>
+      <Point>
+        <coordinates>-16.1792735,64.0485493,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 04 – Diamond Beach</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-11&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Strand&lt;br/&gt;Spaziergang am schwarzen Strand mit angespülten Eisstücken.</description>
+      <Point>
+        <coordinates>-16.1828042,64.0430933,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 05 – Vestrahorn / Stokksnes</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-12&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Landschaft&lt;br/&gt;Landschafts- und Fotostopp an Berg, Dünen und schwarzer Küste.</description>
+      <Point>
+        <coordinates>-15.2127278,64.2525610,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 05 – Ostfjorde – Küstenfahrt</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-12&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Panoramafahrt&lt;br/&gt;Repräsentativer Punkt für die Küstenfahrt durch die Ostfjorde.&lt;br/&gt;&lt;i&gt;Repräsentativer Punkt; als Linie besser darstellbar.&lt;/i&gt;</description>
+      <Point>
+        <coordinates>-14.5800000,64.5050000,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 05 – Djúpivogur</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-12&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Ort / Café&lt;br/&gt;Café und Kuchen an der Hafenkneipe sowie kurzer Ortsrundgang.</description>
+      <Point>
+        <coordinates>-14.2828454,64.6563103,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 05 – Gufufoss</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-12&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wasserfall&lt;br/&gt;Kurzer Wasserfall- und Fotostopp.</description>
+      <Point>
+        <coordinates>-14.0528387,65.2407772,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 05 – Seyðisfjörður</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-12&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Ort / Essen / Übernachtung&lt;br/&gt;Burger gegessen, den Ort besichtigt und dort übernachtet.</description>
+      <Point>
+        <coordinates>-14.0111549,65.2604585,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 06 – Stuðlagil</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-13&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wanderung&lt;br/&gt;Wanderung auf der Ostseite zur Basaltschlucht.</description>
+      <Point>
+        <coordinates>-15.2740367,65.1745067,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 06 – Vök Baths</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-13&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Geothermalbad&lt;br/&gt;Längere Bade- und Entspannungspause.</description>
+      <Point>
+        <coordinates>-14.4469872,65.3030639,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 06 – Möðrudalur</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-13&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Essen / Wanderung&lt;br/&gt;Lammsuppe und Abendwanderung im Sonnenuntergang über die Hochebene.</description>
+      <Point>
+        <coordinates>-15.8832723,65.3740644,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 07 – Hverir / Námaskarð</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-14&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Geothermalgebiet&lt;br/&gt;Rundgang zwischen Schlammtöpfen und Dampfaustritten.</description>
+      <Point>
+        <coordinates>-16.8093111,65.6409144,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 07 – Krafla / Leirhnjúkur</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-14&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wanderung&lt;br/&gt;Wanderung durch Lavafelder und geothermisch aktive Landschaft.</description>
+      <Point>
+        <coordinates>-16.7741648,65.7130714,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 07 – Grjótagjá</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-14&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Lavahöhle&lt;br/&gt;Kurzer Besuch der Lavahöhle mit heißer Quelle.</description>
+      <Point>
+        <coordinates>-16.8830077,65.6263565,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 07 – Dettifoss</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-14&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wasserfall / Wanderung&lt;br/&gt;Längere Erkundung des Wasserfalls und seiner Umgebung.</description>
+      <Point>
+        <coordinates>-16.3873164,65.8160507,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 07 – Goðafoss</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-14&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wasserfall / Wanderung / Essen&lt;br/&gt;Lange Erkundung und Wanderung; anschließend dort Abendessen.</description>
+      <Point>
+        <coordinates>-17.5501919,65.6827782,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 08 – Whale Watching Hauganes</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-15&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Bootstour&lt;br/&gt;Walbeobachtungstour ab Hauganes.</description>
+      <Point>
+        <coordinates>-18.2995208,65.9228574,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 08 – Fish &amp; Chips Hauganes</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-15&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Essen&lt;br/&gt;Fish and Chips vor dem Besuch der Beach Baths.</description>
+      <Point>
+        <coordinates>-18.3030000,65.9232000,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 08 – Beach Baths Hauganes</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-15&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Geothermalbad&lt;br/&gt;Baden in den warmen Becken direkt am Meer.</description>
+      <Point>
+        <coordinates>-18.3040880,65.9224979,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 08 – Tröllaskagi-Küstentour</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-15&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Panoramafahrt&lt;br/&gt;Repräsentativer Punkt für die Küstenfahrt durch Tröllaskagi.&lt;br/&gt;&lt;i&gt;Repräsentativer Punkt; als Linie besser darstellbar.&lt;/i&gt;</description>
+      <Point>
+        <coordinates>-18.9505875,66.1868994,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 08 – Reykjafoss / Fosslaug</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-15&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wanderung&lt;br/&gt;Wanderung zu Wasserfall und Hot Pot; nicht gebadet.</description>
+      <Point>
+        <coordinates>-19.4060766,65.9914589,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 09 – Kolugljúfur</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-16&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wanderung / Klettern&lt;br/&gt;Längere Schluchtenerkundung und tiefes Hineinklettern.</description>
+      <Point>
+        <coordinates>-20.5712959,65.3333817,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 09 – Grábrók</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-16&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wanderung&lt;br/&gt;Aufstieg auf den Vulkankrater und Rundgang am Kraterrand.</description>
+      <Point>
+        <coordinates>-21.5313648,64.7714113,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 09 – Hraunfossar</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-16&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wasserfall / Spaziergang&lt;br/&gt;Spaziergang entlang der Aussichtspunkte.</description>
+      <Point>
+        <coordinates>-20.9771601,64.7028034,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 09 – Barnafoss</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-16&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wasserfall / Spaziergang&lt;br/&gt;Weiterweg zu den Brücken und Stromschnellen.</description>
+      <Point>
+        <coordinates>-20.9800000,64.7015000,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 10 – Glymur</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-17&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Wanderung&lt;br/&gt;Große Rundwanderung durch die Schlucht zum Wasserfall.</description>
+      <Point>
+        <coordinates>-21.2933308,64.3851979,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 10 – Hvalfjörður</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-17&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Panoramafahrt&lt;br/&gt;Repräsentativer Punkt für die Fahrt durch die Fjordlandschaft.&lt;br/&gt;&lt;i&gt;Repräsentativer Punkt; als Linie besser darstellbar.&lt;/i&gt;</description>
+      <Point>
+        <coordinates>-21.5644376,64.3735887,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 10 – Harpa</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-17&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Architektur&lt;br/&gt;Besichtigung des Konzerthauses und Hafenbereichs.</description>
+      <Point>
+        <coordinates>-21.9322805,64.1502464,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 10 – Sun Voyager</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-17&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Sehenswürdigkeit&lt;br/&gt;Besichtigung und Fotostopp an der Uferpromenade.</description>
+      <Point>
+        <coordinates>-21.9223325,64.1476723,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 10 – Hallgrímskirkja</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-17&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Kirche&lt;br/&gt;Besichtigung von Kirche und Vorplatz.</description>
+      <Point>
+        <coordinates>-21.9265494,64.1420229,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 10 – Rainbow Street / Innenstadt</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-17&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Stadtspaziergang&lt;br/&gt;Bummel durch die Innenstadt und über die Regenbogenstraße.</description>
+      <Point>
+        <coordinates>-21.9316700,64.1453543,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 10 – Tjörnin und Altstadt</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-17&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Stadtspaziergang&lt;br/&gt;Spaziergang am Stadtsee und durch das historische Zentrum.</description>
+      <Point>
+        <coordinates>-21.9421981,64.1463542,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 10 – Alter Hafen Reykjavík</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-17&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Stadtspaziergang&lt;br/&gt;Rundgang im alten Hafenviertel.</description>
+      <Point>
+        <coordinates>-21.9472626,64.1512853,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 10 – Hamborgarabúlla Tómasar</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-17&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Essen&lt;br/&gt;Burger zum Abschluss des Stadtrundgangs.</description>
+      <Point>
+        <coordinates>-21.9450620,64.1508890,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 11 – Esja / Þverfellshorn über Steinn</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-18&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Bergwanderung&lt;br/&gt;Fünfstündige Bergwanderung über Steinn hinaus zum höheren Gipfelbereich.</description>
+      <Point>
+        <coordinates>-21.7119367,64.2325534,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 11 – Lavafeld bei Sýlingarfell</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-18&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Vulkanlandschaft&lt;br/&gt;Frische Lava aus der Nähe angesehen und fotografiert.</description>
+      <Point>
+        <coordinates>-22.4335816,63.8895700,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 11 – Grindavík</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-18&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Ort / Vulkanfolgen&lt;br/&gt;Durch den vom Vulkanismus betroffenen Ort gefahren und die Situation angesehen.</description>
+      <Point>
+        <coordinates>-22.4467452,63.8442753,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 11 – Reykjanes-Küstentour</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-18&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Panoramafahrt&lt;br/&gt;Repräsentativer Punkt für die Küstentour entlang der Reykjanes-Halbinsel.&lt;br/&gt;&lt;i&gt;Repräsentativer Punkt; als Linie besser darstellbar.&lt;/i&gt;</description>
+      <Point>
+        <coordinates>-22.6779299,63.8286876,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 11 – Gunnuhver / Reykjanesviti</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-18&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Geothermalgebiet / Leuchtturm&lt;br/&gt;Kurzer Halt beziehungsweise bewusste Durchfahrt im Küstenbereich.</description>
+      <Point>
+        <coordinates>-22.6860000,63.8190000,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tag 11 – Sandgerði</name>
+      <description>&lt;b&gt;Datum:&lt;/b&gt; 2026-06-18&lt;br/&gt;&lt;b&gt;Kategorie:&lt;/b&gt; Übernachtung&lt;br/&gt;Letzter Campingabend vor der Abreise.</description>
+      <Point>
+        <coordinates>-22.6978361,64.0393819,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

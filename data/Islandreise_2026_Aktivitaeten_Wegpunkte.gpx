@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="OpenAI – Islandreise 2026" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Islandreise 2026 – Aktivitäten als Wegpunkte</name>
+    <desc>Ein beschrifteter Wegpunkt pro abgestimmter Reiseaktivität.</desc>
+  </metadata>
+  <wpt lat="64.0218948" lon="-21.2111691">
+    <name>Tag 01 – Reykjadalur</name>
+    <cmt>2026-06-08 · Wanderung</cmt>
+    <desc>Wanderung durch das Geothermaltal zum warmen Fluss.</desc>
+    <type>Wanderung</type>
+  </wpt>
+  <wpt lat="64.0412785" lon="-20.8851466">
+    <name>Tag 01 – Kerið</name>
+    <cmt>2026-06-08 · Natur</cmt>
+    <desc>Rundgang am Vulkankrater mit Kratersee.</desc>
+    <type>Natur</type>
+  </wpt>
+  <wpt lat="64.3127094" lon="-20.3007210">
+    <name>Tag 01 – Geysir / Strokkur</name>
+    <cmt>2026-06-08 · Geothermalgebiet</cmt>
+    <desc>Ausbrüche des Strokkur und Rundgang durch das Geothermalfeld.</desc>
+    <type>Geothermalgebiet</type>
+  </wpt>
+  <wpt lat="64.3261810" lon="-20.1244322">
+    <name>Tag 01 – Gullfoss</name>
+    <cmt>2026-06-08 · Wasserfall</cmt>
+    <desc>Besichtigung des Wasserfalls von mehreren Aussichtspunkten.</desc>
+    <type>Wasserfall</type>
+  </wpt>
+  <wpt lat="63.6157167" lon="-19.9937851">
+    <name>Tag 02 – Seljalandsfoss</name>
+    <cmt>2026-06-09 · Wasserfall</cmt>
+    <desc>Besichtigung und Weg hinter dem Wasservorhang.</desc>
+    <type>Wasserfall</type>
+  </wpt>
+  <wpt lat="63.6208631" lon="-19.9864486">
+    <name>Tag 02 – Gljúfrabúi</name>
+    <cmt>2026-06-09 · Wasserfall</cmt>
+    <desc>Gang durch die Felsspalte zum versteckten Wasserfall.</desc>
+    <type>Wasserfall</type>
+  </wpt>
+  <wpt lat="63.5270996" lon="-19.5109844">
+    <name>Tag 02 – Skógafoss / Skógá-Wanderung</name>
+    <cmt>2026-06-09 · Wanderung</cmt>
+    <desc>Skógafoss und lange Wanderung oberhalb des Wasserfalls entlang der Skógá.</desc>
+    <type>Wanderung</type>
+  </wpt>
+  <wpt lat="63.7795518" lon="-18.1685000">
+    <name>Tag 03 – Fjaðrárgljúfur</name>
+    <cmt>2026-06-10 · Wanderung</cmt>
+    <desc>Wanderung entlang der Aussichtspunkte der Schlucht.</desc>
+    <type>Wanderung</type>
+  </wpt>
+  <wpt lat="63.7876503" lon="-18.0602872">
+    <name>Tag 03 – Systrafoss</name>
+    <cmt>2026-06-10 · Kurzer Stopp</cmt>
+    <desc>Nur kurzer Halt oder Blick aus dem Fahrzeug.</desc>
+    <type>Kurzer Stopp</type>
+  </wpt>
+  <wpt lat="63.8492447" lon="-17.8612650">
+    <name>Tag 03 – Dverghamrar</name>
+    <cmt>2026-06-10 · Natur</cmt>
+    <desc>Kurzer Rundgang an den Basaltsäulen.</desc>
+    <type>Natur</type>
+  </wpt>
+  <wpt lat="63.9569722" lon="-17.4762678">
+    <name>Tag 03 – Lómagnúpur</name>
+    <cmt>2026-06-10 · Aussichtspunkt</cmt>
+    <desc>Aussichts- und Fotostopp an der großen Felswand.</desc>
+    <type>Aussichtspunkt</type>
+  </wpt>
+  <wpt lat="64.0145915" lon="-16.9679636">
+    <name>Tag 03 – Skaftafell – Gletscherwanderung</name>
+    <cmt>2026-06-10 · Wanderung</cmt>
+    <desc>Lange Wanderung entlang des Gletschers.</desc>
+    <type>Wanderung</type>
+  </wpt>
+  <wpt lat="63.9069579" lon="-16.7068419">
+    <name>Tag 04 – Hofskirkja</name>
+    <cmt>2026-06-11 · Kultur</cmt>
+    <desc>Besichtigung der historischen Torfkirche und Umgebung.</desc>
+    <type>Kultur</type>
+  </wpt>
+  <wpt lat="63.9679585" lon="-16.8023380">
+    <name>Tag 04 – Gletscherwanderung / Eisklettern</name>
+    <cmt>2026-06-11 · Wanderung</cmt>
+    <desc>Geführte Gletscherwanderung mit Eisklettern.</desc>
+    <type>Wanderung</type>
+  </wpt>
+  <wpt lat="64.0485493" lon="-16.1792735">
+    <name>Tag 04 – Jökulsárlón</name>
+    <cmt>2026-06-11 · Gletscherlagune</cmt>
+    <desc>Längere Besichtigung der Lagune mit Eisbergen.</desc>
+    <type>Gletscherlagune</type>
+  </wpt>
+  <wpt lat="64.0430933" lon="-16.1828042">
+    <name>Tag 04 – Diamond Beach</name>
+    <cmt>2026-06-11 · Strand</cmt>
+    <desc>Spaziergang am schwarzen Strand mit angespülten Eisstücken.</desc>
+    <type>Strand</type>
+  </wpt>
+  <wpt lat="64.2525610" lon="-15.2127278">
+    <name>Tag 05 – Vestrahorn / Stokksnes</name>
+    <cmt>2026-06-12 · Landschaft</cmt>
+    <desc>Landschafts- und Fotostopp an Berg, Dünen und schwarzer Küste.</desc>
+    <type>Landschaft</type>
+  </wpt>
+  <wpt lat="64.5050000" lon="-14.5800000">
+    <name>Tag 05 – Ostfjorde – Küstenfahrt</name>
+    <cmt>2026-06-12 · Panoramafahrt</cmt>
+    <desc>Repräsentativer Punkt für die Küstenfahrt durch die Ostfjorde. Repräsentativer Punkt; als Linie besser darstellbar.</desc>
+    <type>Panoramafahrt</type>
+  </wpt>
+  <wpt lat="64.6563103" lon="-14.2828454">
+    <name>Tag 05 – Djúpivogur</name>
+    <cmt>2026-06-12 · Ort / Café</cmt>
+    <desc>Café und Kuchen an der Hafenkneipe sowie kurzer Ortsrundgang.</desc>
+    <type>Ort / Café</type>
+  </wpt>
+  <wpt lat="65.2407772" lon="-14.0528387">
+    <name>Tag 05 – Gufufoss</name>
+    <cmt>2026-06-12 · Wasserfall</cmt>
+    <desc>Kurzer Wasserfall- und Fotostopp.</desc>
+    <type>Wasserfall</type>
+  </wpt>
+  <wpt lat="65.2604585" lon="-14.0111549">
+    <name>Tag 05 – Seyðisfjörður</name>
+    <cmt>2026-06-12 · Ort / Essen / Übernachtung</cmt>
+    <desc>Burger gegessen, den Ort besichtigt und dort übernachtet.</desc>
+    <type>Ort / Essen / Übernachtung</type>
+  </wpt>
+  <wpt lat="65.1745067" lon="-15.2740367">
+    <name>Tag 06 – Stuðlagil</name>
+    <cmt>2026-06-13 · Wanderung</cmt>
+    <desc>Wanderung auf der Ostseite zur Basaltschlucht.</desc>
+    <type>Wanderung</type>
+  </wpt>
+  <wpt lat="65.3030639" lon="-14.4469872">
+    <name>Tag 06 – Vök Baths</name>
+    <cmt>2026-06-13 · Geothermalbad</cmt>
+    <desc>Längere Bade- und Entspannungspause.</desc>
+    <type>Geothermalbad</type>
+  </wpt>
+  <wpt lat="65.3740644" lon="-15.8832723">
+    <name>Tag 06 – Möðrudalur</name>
+    <cmt>2026-06-13 · Essen / Wanderung</cmt>
+    <desc>Lammsuppe und Abendwanderung im Sonnenuntergang über die Hochebene.</desc>
+    <type>Essen / Wanderung</type>
+  </wpt>
+  <wpt lat="65.6409144" lon="-16.8093111">
+    <name>Tag 07 – Hverir / Námaskarð</name>
+    <cmt>2026-06-14 · Geothermalgebiet</cmt>
+    <desc>Rundgang zwischen Schlammtöpfen und Dampfaustritten.</desc>
+    <type>Geothermalgebiet</type>
+  </wpt>
+  <wpt lat="65.7130714" lon="-16.7741648">
+    <name>Tag 07 – Krafla / Leirhnjúkur</name>
+    <cmt>2026-06-14 · Wanderung</cmt>
+    <desc>Wanderung durch Lavafelder und geothermisch aktive Landschaft.</desc>
+    <type>Wanderung</type>
+  </wpt>
+  <wpt lat="65.6263565" lon="-16.8830077">
+    <name>Tag 07 – Grjótagjá</name>
+    <cmt>2026-06-14 · Lavahöhle</cmt>
+    <desc>Kurzer Besuch der Lavahöhle mit heißer Quelle.</desc>
+    <type>Lavahöhle</type>
+  </wpt>
+  <wpt lat="65.8160507" lon="-16.3873164">
+    <name>Tag 07 – Dettifoss</name>
+    <cmt>2026-06-14 · Wasserfall / Wanderung</cmt>
+    <desc>Längere Erkundung des Wasserfalls und seiner Umgebung.</desc>
+    <type>Wasserfall / Wanderung</type>
+  </wpt>
+  <wpt lat="65.6827782" lon="-17.5501919">
+    <name>Tag 07 – Goðafoss</name>
+    <cmt>2026-06-14 · Wasserfall / Wanderung / Essen</cmt>
+    <desc>Lange Erkundung und Wanderung; anschließend dort Abendessen.</desc>
+    <type>Wasserfall / Wanderung / Essen</type>
+  </wpt>
+  <wpt lat="65.9228574" lon="-18.2995208">
+    <name>Tag 08 – Whale Watching Hauganes</name>
+    <cmt>2026-06-15 · Bootstour</cmt>
+    <desc>Walbeobachtungstour ab Hauganes.</desc>
+    <type>Bootstour</type>
+  </wpt>
+  <wpt lat="65.9232000" lon="-18.3030000">
+    <name>Tag 08 – Fish &amp; Chips Hauganes</name>
+    <cmt>2026-06-15 · Essen</cmt>
+    <desc>Fish and Chips vor dem Besuch der Beach Baths.</desc>
+    <type>Essen</type>
+  </wpt>
+  <wpt lat="65.9224979" lon="-18.3040880">
+    <name>Tag 08 – Beach Baths Hauganes</name>
+    <cmt>2026-06-15 · Geothermalbad</cmt>
+    <desc>Baden in den warmen Becken direkt am Meer.</desc>
+    <type>Geothermalbad</type>
+  </wpt>
+  <wpt lat="66.1868994" lon="-18.9505875">
+    <name>Tag 08 – Tröllaskagi-Küstentour</name>
+    <cmt>2026-06-15 · Panoramafahrt</cmt>
+    <desc>Repräsentativer Punkt für die Küstenfahrt durch Tröllaskagi. Repräsentativer Punkt; als Linie besser darstellbar.</desc>
+    <type>Panoramafahrt</type>
+  </wpt>
+  <wpt lat="65.9914589" lon="-19.4060766">
+    <name>Tag 08 – Reykjafoss / Fosslaug</name>
+    <cmt>2026-06-15 · Wanderung</cmt>
+    <desc>Wanderung zu Wasserfall und Hot Pot; nicht gebadet.</desc>
+    <type>Wanderung</type>
+  </wpt>
+  <wpt lat="65.3333817" lon="-20.5712959">
+    <name>Tag 09 – Kolugljúfur</name>
+    <cmt>2026-06-16 · Wanderung / Klettern</cmt>
+    <desc>Längere Schluchtenerkundung und tiefes Hineinklettern.</desc>
+    <type>Wanderung / Klettern</type>
+  </wpt>
+  <wpt lat="64.7714113" lon="-21.5313648">
+    <name>Tag 09 – Grábrók</name>
+    <cmt>2026-06-16 · Wanderung</cmt>
+    <desc>Aufstieg auf den Vulkankrater und Rundgang am Kraterrand.</desc>
+    <type>Wanderung</type>
+  </wpt>
+  <wpt lat="64.7028034" lon="-20.9771601">
+    <name>Tag 09 – Hraunfossar</name>
+    <cmt>2026-06-16 · Wasserfall / Spaziergang</cmt>
+    <desc>Spaziergang entlang der Aussichtspunkte.</desc>
+    <type>Wasserfall / Spaziergang</type>
+  </wpt>
+  <wpt lat="64.7015000" lon="-20.9800000">
+    <name>Tag 09 – Barnafoss</name>
+    <cmt>2026-06-16 · Wasserfall / Spaziergang</cmt>
+    <desc>Weiterweg zu den Brücken und Stromschnellen.</desc>
+    <type>Wasserfall / Spaziergang</type>
+  </wpt>
+  <wpt lat="64.3851979" lon="-21.2933308">
+    <name>Tag 10 – Glymur</name>
+    <cmt>2026-06-17 · Wanderung</cmt>
+    <desc>Große Rundwanderung durch die Schlucht zum Wasserfall.</desc>
+    <type>Wanderung</type>
+  </wpt>
+  <wpt lat="64.3735887" lon="-21.5644376">
+    <name>Tag 10 – Hvalfjörður</name>
+    <cmt>2026-06-17 · Panoramafahrt</cmt>
+    <desc>Repräsentativer Punkt für die Fahrt durch die Fjordlandschaft. Repräsentativer Punkt; als Linie besser darstellbar.</desc>
+    <type>Panoramafahrt</type>
+  </wpt>
+  <wpt lat="64.1502464" lon="-21.9322805">
+    <name>Tag 10 – Harpa</name>
+    <cmt>2026-06-17 · Architektur</cmt>
+    <desc>Besichtigung des Konzerthauses und Hafenbereichs.</desc>
+    <type>Architektur</type>
+  </wpt>
+  <wpt lat="64.1476723" lon="-21.9223325">
+    <name>Tag 10 – Sun Voyager</name>
+    <cmt>2026-06-17 · Sehenswürdigkeit</cmt>
+    <desc>Besichtigung und Fotostopp an der Uferpromenade.</desc>
+    <type>Sehenswürdigkeit</type>
+  </wpt>
+  <wpt lat="64.1420229" lon="-21.9265494">
+    <name>Tag 10 – Hallgrímskirkja</name>
+    <cmt>2026-06-17 · Kirche</cmt>
+    <desc>Besichtigung von Kirche und Vorplatz.</desc>
+    <type>Kirche</type>
+  </wpt>
+  <wpt lat="64.1453543" lon="-21.9316700">
+    <name>Tag 10 – Rainbow Street / Innenstadt</name>
+    <cmt>2026-06-17 · Stadtspaziergang</cmt>
+    <desc>Bummel durch die Innenstadt und über die Regenbogenstraße.</desc>
+    <type>Stadtspaziergang</type>
+  </wpt>
+  <wpt lat="64.1463542" lon="-21.9421981">
+    <name>Tag 10 – Tjörnin und Altstadt</name>
+    <cmt>2026-06-17 · Stadtspaziergang</cmt>
+    <desc>Spaziergang am Stadtsee und durch das historische Zentrum.</desc>
+    <type>Stadtspaziergang</type>
+  </wpt>
+  <wpt lat="64.1512853" lon="-21.9472626">
+    <name>Tag 10 – Alter Hafen Reykjavík</name>
+    <cmt>2026-06-17 · Stadtspaziergang</cmt>
+    <desc>Rundgang im alten Hafenviertel.</desc>
+    <type>Stadtspaziergang</type>
+  </wpt>
+  <wpt lat="64.1508890" lon="-21.9450620">
+    <name>Tag 10 – Hamborgarabúlla Tómasar</name>
+    <cmt>2026-06-17 · Essen</cmt>
+    <desc>Burger zum Abschluss des Stadtrundgangs.</desc>
+    <type>Essen</type>
+  </wpt>
+  <wpt lat="64.2325534" lon="-21.7119367">
+    <name>Tag 11 – Esja / Þverfellshorn über Steinn</name>
+    <cmt>2026-06-18 · Bergwanderung</cmt>
+    <desc>Fünfstündige Bergwanderung über Steinn hinaus zum höheren Gipfelbereich.</desc>
+    <type>Bergwanderung</type>
+  </wpt>
+  <wpt lat="63.8895700" lon="-22.4335816">
+    <name>Tag 11 – Lavafeld bei Sýlingarfell</name>
+    <cmt>2026-06-18 · Vulkanlandschaft</cmt>
+    <desc>Frische Lava aus der Nähe angesehen und fotografiert.</desc>
+    <type>Vulkanlandschaft</type>
+  </wpt>
+  <wpt lat="63.8442753" lon="-22.4467452">
+    <name>Tag 11 – Grindavík</name>
+    <cmt>2026-06-18 · Ort / Vulkanfolgen</cmt>
+    <desc>Durch den vom Vulkanismus betroffenen Ort gefahren und die Situation angesehen.</desc>
+    <type>Ort / Vulkanfolgen</type>
+  </wpt>
+  <wpt lat="63.8286876" lon="-22.6779299">
+    <name>Tag 11 – Reykjanes-Küstentour</name>
+    <cmt>2026-06-18 · Panoramafahrt</cmt>
+    <desc>Repräsentativer Punkt für die Küstentour entlang der Reykjanes-Halbinsel. Repräsentativer Punkt; als Linie besser darstellbar.</desc>
+    <type>Panoramafahrt</type>
+  </wpt>
+  <wpt lat="63.8190000" lon="-22.6860000">
+    <name>Tag 11 – Gunnuhver / Reykjanesviti</name>
+    <cmt>2026-06-18 · Geothermalgebiet / Leuchtturm</cmt>
+    <desc>Kurzer Halt beziehungsweise bewusste Durchfahrt im Küstenbereich.</desc>
+    <type>Geothermalgebiet / Leuchtturm</type>
+  </wpt>
+  <wpt lat="64.0393819" lon="-22.6978361">
+    <name>Tag 11 – Sandgerði</name>
+    <cmt>2026-06-18 · Übernachtung</cmt>
+    <desc>Letzter Campingabend vor der Abreise.</desc>
+    <type>Übernachtung</type>
+  </wpt>
+</gpx>
