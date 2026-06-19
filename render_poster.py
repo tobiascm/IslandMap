@@ -33,9 +33,9 @@ from adjustText import adjust_text
 # --------------------------------------------------------------------------
 # configuration
 # --------------------------------------------------------------------------
-TRACK_GPX = "island_track.gpx"
+TRACK_GPX = "data/island_track.gpx"
 ACT_GPX = "data/Islandreise_2026_Aktivitaeten_Wegpunkte.gpx"
-OUTPUT = "island_poster.png"
+OUTPUT = "output/island_poster.png"
 
 ZOOM = 8
 BG = "#0c1626"            # poster background (dark navy)
@@ -58,7 +58,13 @@ HIGHLIGHTS = {
     8: "Whale Watching · Beach Baths · Tröllaskagi · Reykjafoss",
     9: "Kolugljúfur · Grábrók · Hraunfossar/Barnafoss",
     10: "Glymur · Reykjavík-Stadtrundgang",
-    11: "Esja · Reykjanes · Grindavík · Lavafeld · Küstentour",
+    11: "Þverfellshorn · Reykjanes · Grindavík · Lavafeld · Küstentour",
+}
+
+# a few waypoint names need a more specific display name than their raw
+# "Tag NN – ..." text (e.g. the actual hike target, not the wider area)
+NAME_OVERRIDES = {
+    "Esja / Þverfellshorn über Steinn": "Þverfellshorn",
 }
 
 CLUSTER_KM = 4.0          # merge same-day stops closer than this
@@ -200,7 +206,8 @@ def read_activities():
             if len(members) > 1 and any("Reykjavík" in m[0] for m in members):
                 label = "Reykjavík"
             else:
-                names = [m[0].split(" / ")[0].split(" – ")[0] for m in members]
+                names = [NAME_OVERRIDES.get(m[0], m[0].split(" / ")[0].split(" – ")[0])
+                          for m in members]
                 label = " · ".join(names)
             labels.append((day, label, x, y, len(members)))
     return labels
@@ -248,13 +255,36 @@ def main():
         ax.scatter([x], [y], s=70, color=PALETTE[day - 1], edgecolors="white",
                    linewidths=1.1, zorder=5)
 
-    # activity labels with leader lines (auto de-overlapped)
+    # activity labels with leader lines (auto de-overlapped); a few labels in
+    # cramped corners get a fixed manual nudge instead since adjust_text alone
+    # can't pull them apart from their crowded neighbours
+    MANUAL_LABEL_NUDGE = {
+        "Reykjanes-Küstentour · Gunnuhver": (-35055, -5172),
+        "Grindavík": (-61240, -60329),
+        "Lavafeld bei Sýlingarfell": (-62705, -111777),
+    }
+    MANUAL_LABEL_HA = {
+        "Reykjanes-Küstentour · Gunnuhver": "left",
+        "Grindavík": "left",
+        "Lavafeld bei Sýlingarfell": "left",
+    }
     cx_mid = (w + e) / 2
     texts = []
     for day, label, x, y, members in activities:
-        wrapped = textwrap.fill(label, width=24) if members > 1 else label
+        wrapped = textwrap.fill(label, width=19) if len(label) > 19 else label
         ha = "left" if x >= cx_mid else "right"
-        txt = ax.text(x, y, wrapped, fontsize=10, color="white", ha=ha, va="center",
+        if label in MANUAL_LABEL_NUDGE:
+            dx, dy = MANUAL_LABEL_NUDGE[label]
+            ha = MANUAL_LABEL_HA.get(label, ha)
+            ann = ax.annotate(wrapped, xy=(x, y), xytext=(x + dx, y + dy),
+                              fontsize=13, color="white", ha=ha, va="center", zorder=7,
+                              bbox=dict(boxstyle="round,pad=0.28", fc="#0d1726ee",
+                                        ec=PALETTE[day - 1], lw=1.0),
+                              arrowprops=dict(arrowstyle="-", color="white", lw=0.7,
+                                              alpha=0.8))
+            ann.set_path_effects([pe.withStroke(linewidth=0.5, foreground="black")])
+            continue
+        txt = ax.text(x, y, wrapped, fontsize=13, color="white", ha=ha, va="center",
                       zorder=7,
                       bbox=dict(boxstyle="round,pad=0.28", fc="#0d1726ee",
                                 ec=PALETTE[day - 1], lw=1.0))
@@ -281,10 +311,8 @@ def main():
 
     pan.text(0.07, 0.045, "ISLAND 2026", fontsize=30, fontweight="bold",
              color="white", ha="left", va="center")
-    pan.text(0.075, 0.085, "11 TAGE", fontsize=15, fontweight="bold",
-             color="#7f9bd0", ha="left", va="center")
 
-    top0, bot0 = 0.115, 0.992
+    top0, bot0 = 0.08, 0.992
     ch = (bot0 - top0) / 11
     for day in range(1, 12):
         ty = top0 + (day - 1) * ch
@@ -299,11 +327,11 @@ def main():
                     linewidths=1.6, zorder=3)
         pan.text(0.115, cy, str(day), fontsize=13, fontweight="bold",
                  color=text_color_for(col), ha="center", va="center", zorder=4)
-        pan.text(0.205, cy - 0.018, f"TAG {day}", fontsize=14, fontweight="bold",
+        pan.text(0.205, cy - 0.015, f"TAG {day}", fontsize=14, fontweight="bold",
                  color="white", ha="left", va="center", zorder=4)
-        wrapped = textwrap.fill(HIGHLIGHTS[day], width=38)
-        pan.text(0.205, cy + 0.016, wrapped, fontsize=10, color="#c3cee0",
-                 ha="left", va="center", zorder=4, linespacing=1.2)
+        wrapped = textwrap.fill(HIGHLIGHTS[day], width=30)
+        pan.text(0.205, cy + 0.013, wrapped, fontsize=13, color="#c3cee0",
+                 ha="left", va="center", zorder=4, linespacing=1.15)
 
     fig.savefig(OUTPUT, dpi=150, facecolor=BG)
     print(f"Saved {OUTPUT}")

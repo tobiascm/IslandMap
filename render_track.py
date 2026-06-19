@@ -18,8 +18,8 @@ from matplotlib.colors import LightSource
 import contextily as cx
 from pyproj import Transformer
 
-GPX_PATH = "island_track.gpx"
-OUTPUT_PATH = "island_track.png"
+GPX_PATH = "data/island_track.gpx"
+OUTPUT_PATH = "output/island_track.png"
 
 # --- look & feel -----------------------------------------------------------
 ZOOM = 9                 # tile zoom level (higher = sharper, slower download)
