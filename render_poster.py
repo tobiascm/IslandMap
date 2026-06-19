@@ -252,9 +252,9 @@ def main():
     cx_mid = (w + e) / 2
     texts = []
     for day, label, x, y, members in activities:
-        wrapped = textwrap.fill(label, width=24) if members > 1 else label
+        wrapped = textwrap.fill(label, width=22) if members > 1 else label
         ha = "left" if x >= cx_mid else "right"
-        txt = ax.text(x, y, wrapped, fontsize=10, color="white", ha=ha, va="center",
+        txt = ax.text(x, y, wrapped, fontsize=11.5, color="white", ha=ha, va="center",
                       zorder=7,
                       bbox=dict(boxstyle="round,pad=0.28", fc="#0d1726ee",
                                 ec=PALETTE[day - 1], lw=1.0))
@@ -281,10 +281,8 @@ def main():
 
     pan.text(0.07, 0.045, "ISLAND 2026", fontsize=30, fontweight="bold",
              color="white", ha="left", va="center")
-    pan.text(0.075, 0.085, "11 TAGE", fontsize=15, fontweight="bold",
-             color="#7f9bd0", ha="left", va="center")
 
-    top0, bot0 = 0.115, 0.992
+    top0, bot0 = 0.08, 0.992
     ch = (bot0 - top0) / 11
     for day in range(1, 12):
         ty = top0 + (day - 1) * ch
@@ -301,8 +299,8 @@ def main():
                  color=text_color_for(col), ha="center", va="center", zorder=4)
         pan.text(0.205, cy - 0.018, f"TAG {day}", fontsize=14, fontweight="bold",
                  color="white", ha="left", va="center", zorder=4)
-        wrapped = textwrap.fill(HIGHLIGHTS[day], width=38)
-        pan.text(0.205, cy + 0.016, wrapped, fontsize=10, color="#c3cee0",
+        wrapped = textwrap.fill(HIGHLIGHTS[day], width=34)
+        pan.text(0.205, cy + 0.016, wrapped, fontsize=11.5, color="#c3cee0",
                  ha="left", va="center", zorder=4, linespacing=1.2)
 
     fig.savefig(OUTPUT, dpi=150, facecolor=BG)
