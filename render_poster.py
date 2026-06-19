@@ -58,7 +58,13 @@ HIGHLIGHTS = {
     8: "Whale Watching · Beach Baths · Tröllaskagi · Reykjafoss",
     9: "Kolugljúfur · Grábrók · Hraunfossar/Barnafoss",
     10: "Glymur · Reykjavík-Stadtrundgang",
-    11: "Esja · Reykjanes · Grindavík · Lavafeld · Küstentour",
+    11: "Þverfellshorn · Reykjanes · Grindavík · Lavafeld · Küstentour",
+}
+
+# a few waypoint names need a more specific display name than their raw
+# "Tag NN – ..." text (e.g. the actual hike target, not the wider area)
+NAME_OVERRIDES = {
+    "Esja / Þverfellshorn über Steinn": "Þverfellshorn",
 }
 
 CLUSTER_KM = 4.0          # merge same-day stops closer than this
@@ -200,7 +206,8 @@ def read_activities():
             if len(members) > 1 and any("Reykjavík" in m[0] for m in members):
                 label = "Reykjavík"
             else:
-                names = [m[0].split(" / ")[0].split(" – ")[0] for m in members]
+                names = [NAME_OVERRIDES.get(m[0], m[0].split(" / ")[0].split(" – ")[0])
+                          for m in members]
                 label = " · ".join(names)
             labels.append((day, label, x, y, len(members)))
     return labels
@@ -248,12 +255,35 @@ def main():
         ax.scatter([x], [y], s=70, color=PALETTE[day - 1], edgecolors="white",
                    linewidths=1.1, zorder=5)
 
-    # activity labels with leader lines (auto de-overlapped)
+    # activity labels with leader lines (auto de-overlapped); a few labels in
+    # cramped corners get a fixed manual nudge instead since adjust_text alone
+    # can't pull them apart from their crowded neighbours
+    MANUAL_LABEL_NUDGE = {
+        "Reykjanes-Küstentour · Gunnuhver": (-35055, -5172),
+        "Grindavík": (-61240, -60329),
+        "Lavafeld bei Sýlingarfell": (-62705, -111777),
+    }
+    MANUAL_LABEL_HA = {
+        "Reykjanes-Küstentour · Gunnuhver": "left",
+        "Grindavík": "left",
+        "Lavafeld bei Sýlingarfell": "left",
+    }
     cx_mid = (w + e) / 2
     texts = []
     for day, label, x, y, members in activities:
-        wrapped = textwrap.fill(label, width=19) if members > 1 else label
+        wrapped = textwrap.fill(label, width=19) if len(label) > 19 else label
         ha = "left" if x >= cx_mid else "right"
+        if label in MANUAL_LABEL_NUDGE:
+            dx, dy = MANUAL_LABEL_NUDGE[label]
+            ha = MANUAL_LABEL_HA.get(label, ha)
+            ann = ax.annotate(wrapped, xy=(x, y), xytext=(x + dx, y + dy),
+                              fontsize=13, color="white", ha=ha, va="center", zorder=7,
+                              bbox=dict(boxstyle="round,pad=0.28", fc="#0d1726ee",
+                                        ec=PALETTE[day - 1], lw=1.0),
+                              arrowprops=dict(arrowstyle="-", color="white", lw=0.7,
+                                              alpha=0.8))
+            ann.set_path_effects([pe.withStroke(linewidth=0.5, foreground="black")])
+            continue
         txt = ax.text(x, y, wrapped, fontsize=13, color="white", ha=ha, va="center",
                       zorder=7,
                       bbox=dict(boxstyle="round,pad=0.28", fc="#0d1726ee",
