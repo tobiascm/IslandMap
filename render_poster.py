@@ -141,6 +141,21 @@ def read_overnights():
     return camps
 
 
+CAMP_NAMES = {
+    1: "Flúðir Camping",
+    2: "Vík Campsite",
+    3: "Svínafell Camping",
+    4: "Myllulækur Campsite",
+    5: "Seyðisfjörður Campsite",
+    6: "Möðrudalur / Fjalladýrð Camping",
+    7: "Hamrar Camping",
+    8: "Varmahlíð Camping",
+    9: "Borgarnes Camping",
+    10: "Mosskógar Camping",
+    11: "Sandgerði Camping",
+}
+
+
 # --------------------------------------------------------------------------
 # basemap (cached): 3D shaded-relief satellite with a flat sea
 # --------------------------------------------------------------------------
@@ -428,6 +443,13 @@ def render(runs, day_start, activities, camps=None, focus_day=None,
         oi = OffsetImage(icon, zoom=zoom_factor)
         ab = AnnotationBbox(oi, (cxp, cyp), frameon=False, zorder=9, pad=0)
         ax.add_artist(ab)
+        name = CAMP_NAMES.get(focus_day)
+        if name:
+            ax.annotate(name, (cxp, cyp), xytext=(0, -28),
+                        textcoords="offset points", ha="center", va="top",
+                        fontsize=lbl_fs, fontweight="bold", color="white",
+                        zorder=9,
+                        path_effects=[pe.withStroke(linewidth=3.5, foreground="#0d1726")])
 
     # focus-day title chip on the map
     if focus_day is not None:
