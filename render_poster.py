@@ -29,6 +29,10 @@ from matplotlib.colors import LightSource
 import contextily as cx
 from pyproj import Transformer
 from adjustText import adjust_text
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+import cairosvg
+import io
+from PIL import Image
 
 # --------------------------------------------------------------------------
 # configuration
@@ -101,19 +105,57 @@ def day_from_date(d):
 
 
 # --------------------------------------------------------------------------
+# overnight (camp) location per trip day, derived from the track timeline:
+# the spot where the track rests through the night (densest cluster of points
+# between 22:00 and 06:00 Iceland time = UTC). The night AFTER trip-day N is
+# attributed to day N.
+# --------------------------------------------------------------------------
+def read_overnights():
+    with open(TRACK_GPX, encoding="utf-8") as f:
+        gpx = gpxpy.parse(f)
+    nights = defaultdict(list)
+    for trk in gpx.tracks:
+        for seg in trk.segments:
+            for p in seg.points:
+                t = p.time
+                if t.hour >= 22 or t.hour < 6:
+                    ev = t.date() if t.hour >= 22 else date.fromordinal(
+                        t.date().toordinal() - 1)
+                    nights[day_from_date(ev)].append((p.latitude, p.longitude))
+
+    camps = {}         # trip_day -> (x, y) in EPSG:3857
+    for day, pts in nights.items():
+        if not (1 <= day <= 11):
+            continue
+        # densest point: the one with the most neighbours within ~400 m
+        best, best_n = pts[0], -1
+        for a in pts:
+            cnt = sum(1 for b in pts if haversine_km(a, b) < 0.4)
+            if cnt > best_n:
+                best, best_n = a, cnt
+        # average the tight cluster around that point for a stable centre
+        near = [b for b in pts if haversine_km(best, b) < 0.4]
+        lat = sum(p[0] for p in near) / len(near)
+        lon = sum(p[1] for p in near) / len(near)
+        camps[day] = WGS84_TO_MERC.transform(lon, lat)
+    return camps
+
+
+# --------------------------------------------------------------------------
 # basemap (cached): 3D shaded-relief satellite with a flat sea
 # --------------------------------------------------------------------------
-def build_basemap(w, s, e, n):
-    cache = f"data/_basemap_z{ZOOM}.npz"
+def build_basemap(w, s, e, n, zoom=ZOOM, tag="iceland"):
+    cache = (f"data/_basemap_z{zoom}.npz" if tag == "iceland"
+             else f"data/_basemap_{tag}_z{zoom}.npz")
     if os.path.exists(cache):
         d = np.load(cache)
         return d["img"], tuple(d["ext"])
 
     terr = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
-    print("Downloading elevation tiles ...")
-    dem, ext = cx.bounds2img(w, s, e, n, zoom=ZOOM, source=terr, ll=False)
-    print("Downloading satellite tiles ...")
-    sat, ext2 = cx.bounds2img(w, s, e, n, zoom=ZOOM,
+    print(f"Downloading elevation tiles ({tag}, z{zoom}) ...")
+    dem, ext = cx.bounds2img(w, s, e, n, zoom=zoom, source=terr, ll=False)
+    print(f"Downloading satellite tiles ({tag}, z{zoom}) ...")
+    sat, ext2 = cx.bounds2img(w, s, e, n, zoom=zoom,
                               source=cx.providers.Esri.WorldImagery, ll=False)
     assert np.allclose(ext, ext2)
 
@@ -132,7 +174,10 @@ def build_basemap(w, s, e, n):
     light = LightSource(azdeg=315, altdeg=45)
     shaded = light.shade_rgb(rgb, elevation, blend_mode="overlay",
                              vert_exag=30, dx=dx, dy=dy)
-    shaded[sea] = np.median(rgb[elev_raw < -200], axis=0)
+    deep = rgb[elev_raw < -200]
+    ocean = (np.median(deep, axis=0) if len(deep)
+             else np.array([22, 58, 73]) / 255.0)   # inland tiles have no sea
+    shaded[sea] = ocean
 
     img = (np.clip(shaded, 0, 1) * 255).astype("uint8")
     np.savez_compressed(cache, img=img, ext=np.array(ext))
@@ -213,79 +258,148 @@ def read_activities():
     return labels
 
 
-# --------------------------------------------------------------------------
-# draw
-# --------------------------------------------------------------------------
-def main():
-    runs, day_start = read_track()
-    activities = read_activities()
+# map axes geometry (also used to fit the per-day zoom box to the right aspect)
+MAP_BOX = [0.235, 0.015, 0.755, 0.97]
+FIG_W, FIG_H = 19.2, 10.8
+MAP_ASPECT = (MAP_BOX[2] * FIG_W) / (MAP_BOX[3] * FIG_H)
 
-    allx = [x for _, xs, _ in runs for x in xs]
-    ally = [y for _, _, ys in runs for y in ys]
-    mx = (max(allx) - min(allx)) * 0.06
-    my = (max(ally) - min(ally)) * 0.04
-    w, e = min(allx) - mx, max(allx) + mx
-    s, n = min(ally) - my, max(ally) + my
+# labels in cramped corners of the *overview* map get a fixed manual nudge
+# (projected metres) since adjust_text alone can't pull them apart; these are
+# only applied on the full poster, not the zoomed-in per-day variants
+MANUAL_LABEL_NUDGE = {
+    "Reykjanes-Küstentour · Gunnuhver": (-35055, -5172),
+    "Grindavík": (-61240, -60329),
+    "Lavafeld bei Sýlingarfell": (-62705, -111777),
+}
+MANUAL_LABEL_HA = {
+    "Reykjanes-Küstentour · Gunnuhver": "left",
+    "Grindavík": "left",
+    "Lavafeld bei Sýlingarfell": "left",
+}
 
-    img, ext = build_basemap(w, s, e, n)
+
+CAMP_ICON_SVG = "data/campingsymbol.svg"
+_camp_icon_cache = None
+
+
+def load_camp_icon():
+    """Rasterise the camping-symbol SVG to an RGBA array (white silhouette, transparent bg)."""
+    global _camp_icon_cache
+    if _camp_icon_cache is None:
+        png_bytes = cairosvg.svg2png(url=CAMP_ICON_SVG, output_width=200, output_height=200)
+        img = Image.open(io.BytesIO(png_bytes)).convert("RGBA")
+        arr = np.array(img).astype(np.float64) / 255.0
+        # recolor the black silhouette to dark navy, keep the white outline/alpha as-is
+        black = (arr[..., 0] < 0.3) & (arr[..., 1] < 0.3) & (arr[..., 2] < 0.3) & (arr[..., 3] > 0)
+        arr[black, 0:3] = np.array([13, 23, 38]) / 255.0
+        _camp_icon_cache = arr
+    return _camp_icon_cache
+
+
+def fit_bbox(xs, ys, margin, aspect):
+    """Bounding box around the points, padded and stretched to `aspect` (w/h)."""
+    w, e = min(xs), max(xs)
+    s, n = min(ys), max(ys)
+    dx, dy = (e - w), (n - s)
+    w -= dx * margin; e += dx * margin
+    s -= dy * margin; n += dy * margin
+    dx, dy = (e - w), (n - s)
+    if dx / dy < aspect:                      # too narrow -> widen
+        extra = (dy * aspect - dx) / 2
+        w -= extra; e += extra
+    else:                                     # too short -> heighten
+        extra = (dx / aspect - dy) / 2
+        s -= extra; n += extra
+    return w, s, e, n
+
+
+# --------------------------------------------------------------------------
+# draw one poster: overview (focus_day=None) or a single zoomed-in day
+# --------------------------------------------------------------------------
+def render(runs, day_start, activities, camps=None, focus_day=None,
+           out=OUTPUT, day_zoom=10):
+    camps = camps or {}
+    if focus_day is None:
+        allx = [x for _, xs, _ in runs for x in xs]
+        ally = [y for _, _, ys in runs for y in ys]
+        mx = (max(allx) - min(allx)) * 0.06
+        my = (max(ally) - min(ally)) * 0.04
+        w, e = min(allx) - mx, max(allx) + mx
+        s, n = min(ally) - my, max(ally) + my
+        img, ext = build_basemap(w, s, e, n)
+    else:
+        fx = [x for day, xs, _ in runs if day == focus_day for x in xs]
+        fy = [y for day, _, ys in runs if day == focus_day for y in ys]
+        for day, _, x, y, _ in activities:
+            if day == focus_day:
+                fx.append(x); fy.append(y)
+        if focus_day in camps:                     # keep the camp site in frame
+            cx_, cy_ = camps[focus_day]
+            fx.append(cx_); fy.append(cy_)
+        w, s, e, n = fit_bbox(fx, fy, margin=0.22, aspect=MAP_ASPECT)
+        img, ext = build_basemap(w, s, e, n, zoom=day_zoom, tag=f"day{focus_day}")
     left, right, bottom, top = ext
 
-    fig = plt.figure(figsize=(19.2, 10.8), dpi=150, facecolor=BG)
-    ax = fig.add_axes([0.235, 0.015, 0.755, 0.97])
+    # zoomed-in day images get a much chunkier track and bigger map text
+    if focus_day is None:
+        halo_lw, track_lw, lbl_fs, dot_s = 5.0, 3.2, 13, 70
+    else:
+        halo_lw, track_lw, lbl_fs, dot_s = 10.0, 6.8, 19, 130
+
+    fig = plt.figure(figsize=(FIG_W, FIG_H), dpi=150, facecolor=BG)
+    ax = fig.add_axes(MAP_BOX)
     ax.imshow(img, extent=(left, right, bottom, top), origin="upper", zorder=0)
     ax.set_xlim(w, e)
     ax.set_ylim(s, n)
     ax.set_aspect("equal")
     ax.set_axis_off()
 
-    # track: arrival/departure first (grey), then coloured days on top
+    # track: travel days (grey) first, then coloured days; in focus mode the
+    # non-focus days recede into faint context lines
     for day, xs, ys in runs:
         if day is None:
-            ax.plot(xs, ys, color="#8a93a3", lw=1.2, alpha=0.55, zorder=1)
+            ax.plot(xs, ys, color="#8a93a3", lw=1.2, alpha=0.5, zorder=1)
     for day, xs, ys in runs:
         if day is None:
             continue
         col = PALETTE[day - 1]
-        ax.plot(xs, ys, color="white", lw=5.0, alpha=0.55, solid_capstyle="round",
-                zorder=2)
-        ax.plot(xs, ys, color=col, lw=3.2, solid_capstyle="round", zorder=3)
+        if focus_day is not None and day != focus_day:
+            ax.plot(xs, ys, color="#6b7689", lw=2.0, alpha=0.45, zorder=1)
+            continue
+        ax.plot(xs, ys, color="white", lw=halo_lw, alpha=0.55,
+                solid_capstyle="round", zorder=2)
+        ax.plot(xs, ys, color=col, lw=track_lw, solid_capstyle="round", zorder=3)
 
-    # activity dots
+    # activity dots (non-focus days dimmed in focus mode)
     for day, _, x, y, _ in activities:
-        ax.scatter([x], [y], s=70, color=PALETTE[day - 1], edgecolors="white",
-                   linewidths=1.1, zorder=5)
+        if focus_day is not None and day != focus_day:
+            ax.scatter([x], [y], s=45, color="#6b7689", edgecolors="white",
+                       linewidths=0.8, alpha=0.5, zorder=4)
+        else:
+            ax.scatter([x], [y], s=dot_s, color=PALETTE[day - 1], edgecolors="white",
+                       linewidths=1.3, zorder=5)
 
-    # activity labels with leader lines (auto de-overlapped); a few labels in
-    # cramped corners get a fixed manual nudge instead since adjust_text alone
-    # can't pull them apart from their crowded neighbours
-    MANUAL_LABEL_NUDGE = {
-        "Reykjanes-Küstentour · Gunnuhver": (-35055, -5172),
-        "Grindavík": (-61240, -60329),
-        "Lavafeld bei Sýlingarfell": (-62705, -111777),
-    }
-    MANUAL_LABEL_HA = {
-        "Reykjanes-Küstentour · Gunnuhver": "left",
-        "Grindavík": "left",
-        "Lavafeld bei Sýlingarfell": "left",
-    }
+    # activity labels with leader lines (auto de-overlapped)
     cx_mid = (w + e) / 2
     texts = []
     for day, label, x, y, members in activities:
+        if focus_day is not None and day != focus_day:
+            continue
         wrapped = textwrap.fill(label, width=19) if len(label) > 19 else label
         ha = "left" if x >= cx_mid else "right"
-        if label in MANUAL_LABEL_NUDGE:
+        if focus_day is None and label in MANUAL_LABEL_NUDGE:
             dx, dy = MANUAL_LABEL_NUDGE[label]
             ha = MANUAL_LABEL_HA.get(label, ha)
             ann = ax.annotate(wrapped, xy=(x, y), xytext=(x + dx, y + dy),
-                              fontsize=13, color="white", ha=ha, va="center", zorder=7,
+                              fontsize=lbl_fs, color="white", ha=ha, va="center", zorder=7,
                               bbox=dict(boxstyle="round,pad=0.28", fc="#0d1726ee",
                                         ec=PALETTE[day - 1], lw=1.0),
                               arrowprops=dict(arrowstyle="-", color="white", lw=0.7,
                                               alpha=0.8))
             ann.set_path_effects([pe.withStroke(linewidth=0.5, foreground="black")])
             continue
-        txt = ax.text(x, y, wrapped, fontsize=13, color="white", ha=ha, va="center",
-                      zorder=7,
+        txt = ax.text(x, y, wrapped, fontsize=lbl_fs, color="white", ha=ha,
+                      va="center", zorder=7,
                       bbox=dict(boxstyle="round,pad=0.28", fc="#0d1726ee",
                                 ec=PALETTE[day - 1], lw=1.0))
         txt.set_path_effects([pe.withStroke(linewidth=0.5, foreground="black")])
@@ -294,13 +408,34 @@ def main():
                 expand=(1.25, 1.6), force_text=(0.4, 0.6),
                 arrowprops=dict(arrowstyle="-", color="white", lw=0.7, alpha=0.8))
 
-    # numbered day badges on top
+    # numbered day badges (focus mode: only the focused day's start)
     for day, (x, y) in sorted(day_start.items()):
+        if focus_day is not None and day != focus_day:
+            continue
         col = PALETTE[day - 1]
         ax.scatter([x], [y], s=430, color=col, edgecolors="white", linewidths=1.8,
                    zorder=8)
         ax.text(x, y, str(day), fontsize=12, fontweight="bold",
                 color=text_color_for(col), ha="center", va="center", zorder=9)
+
+    # overnight marker for the focused day: a tent/teepee pictogram (filled
+    # triangle + crossed poles sticking out the top), drawn in map units with a
+    # white halo so it reads clearly on the satellite imagery
+    if focus_day is not None and focus_day in camps:
+        cxp, cyp = camps[focus_day]
+        icon = load_camp_icon()
+        zoom_factor = 0.34 if focus_day is not None else 0.18
+        oi = OffsetImage(icon, zoom=zoom_factor)
+        ab = AnnotationBbox(oi, (cxp, cyp), frameon=False, zorder=9, pad=0)
+        ax.add_artist(ab)
+
+    # focus-day title chip on the map
+    if focus_day is not None:
+        col = PALETTE[focus_day - 1]
+        ax.text(0.025, 0.965, f"TAG {focus_day}", transform=ax.transAxes,
+                fontsize=34, fontweight="bold", color="white",
+                ha="left", va="top", zorder=10,
+                bbox=dict(boxstyle="round,pad=0.4", fc="#0d1726dd", ec=col, lw=2.2))
 
     # ----- side panel -----
     pan = fig.add_axes([0.0, 0.0, 0.235, 1.0])
@@ -318,24 +453,43 @@ def main():
         ty = top0 + (day - 1) * ch
         cy = ty + ch / 2
         col = PALETTE[day - 1]
+        dim = focus_day is not None and day != focus_day
         pan.add_patch(FancyBboxPatch(
             (0.04, ty + 0.004), 0.92, ch - 0.008,
             boxstyle="round,pad=0,rounding_size=0.015",
-            fc=CARD, ec=col, lw=1.1, alpha=0.95, zorder=1,
+            fc=CARD, ec=("#33425c" if dim else col),
+            lw=(1.0 if dim else (2.6 if focus_day == day else 1.1)),
+            alpha=(0.35 if dim else 0.97), zorder=1,
             mutation_aspect=0.35))
         pan.scatter([0.115], [cy], s=540, color=col, edgecolors="white",
-                    linewidths=1.6, zorder=3)
+                    linewidths=1.6, alpha=(0.4 if dim else 1.0), zorder=3)
         pan.text(0.115, cy, str(day), fontsize=13, fontweight="bold",
-                 color=text_color_for(col), ha="center", va="center", zorder=4)
+                 color=text_color_for(col), ha="center", va="center",
+                 alpha=(0.5 if dim else 1.0), zorder=4)
         pan.text(0.205, cy - 0.015, f"TAG {day}", fontsize=14, fontweight="bold",
-                 color="white", ha="left", va="center", zorder=4)
+                 color=("#7b87a0" if dim else "white"),
+                 ha="left", va="center", zorder=4)
         wrapped = textwrap.fill(HIGHLIGHTS[day], width=30)
-        pan.text(0.205, cy + 0.013, wrapped, fontsize=13, color="#c3cee0",
+        pan.text(0.205, cy + 0.013, wrapped, fontsize=13,
+                 color=("#69748c" if dim else "#c3cee0"),
                  ha="left", va="center", zorder=4, linespacing=1.15)
 
-    fig.savefig(OUTPUT, dpi=150, facecolor=BG)
-    print(f"Saved {OUTPUT}")
+    fig.savefig(out, dpi=150, facecolor=BG)
+    plt.close(fig)
+    print(f"Saved {out}")
+
+
+def main(days=None):
+    runs, day_start = read_track()
+    activities = read_activities()
+    camps = read_overnights()
+    render(runs, day_start, activities, camps, focus_day=None, out=OUTPUT)
+    for d in (days or []):
+        render(runs, day_start, activities, camps, focus_day=d,
+               out=f"output/tag_{d:02d}.png")
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    days = [int(a) for a in sys.argv[1:]]
+    main(days=days)
