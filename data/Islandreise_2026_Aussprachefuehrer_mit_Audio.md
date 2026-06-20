@@ -97,7 +97,7 @@ Diese Liste enthält die isländischen Orts-, Landschafts- und Sehenswürdigkeit
 | Isländischer Originalname | Aussprache für Deutsche | Audio | Lokal |
 |---|---|---|---|
 | [Hauganes](https://www.google.com/maps/search/?api=1&query=Hauganes%20Iceland) | **HÖI-ga-nes** | [▶ Forvo-Eintrag](https://forvo.com/word/hauganes/#is) | — |
-| [Eyjafjörður](https://www.google.com/maps/search/?api=1&query=Eyjafj%C3%B6r%C3%B0ur%20Iceland) | **EI-ja-fjör-thür** | [▶ Forvo-Eintrag](https://forvo.com/word/eyjafj%C3%B6r%C3%B0ur/#is) | — |
+| [Eyjafjörður](https://www.google.com/maps/search/?api=1&query=Eyjafj%C3%B6r%C3%B0ur%20Iceland) | **EI-ja-fjör-thür** | [▶ Forvo-Eintrag](https://forvo.com/word/eyjafj%C3%B6r%C3%B0ur/#is) | [▶ lokal](Sounds/Eyjafj%C3%B6r%C3%B0ur.ogg) |
 | [Tröllaskagi](https://www.google.com/maps/search/?api=1&query=Tr%C3%B6llaskagi%20Iceland) | **TRÖTL-a-ska-gi** | [▶ Forvo-Eintrag](https://forvo.com/word/tr%C3%B6llaskagi/#is) | — |
 | [Reykjafoss](https://www.google.com/maps/search/?api=1&query=Reykjafoss%20Iceland) | **REI-kja-foss** | [▶ Forvo-Eintrag](https://forvo.com/word/reykjafoss/#is) | — |
 | [Fosslaug](https://www.google.com/maps/search/?api=1&query=Fosslaug%20Iceland) | **FOSS-löich** | [▶ Forvo-Eintrag](https://forvo.com/word/fosslaug/#is) | — |
@@ -109,14 +109,14 @@ Diese Liste enthält die isländischen Orts-, Landschafts- und Sehenswürdigkeit
 | [Kolugljúfur](https://www.google.com/maps/search/?api=1&query=Koluglj%C3%BAfur%20Iceland) | **KO-lü-glju-wür** | [▶ Forvo-Eintrag](https://forvo.com/word/koluglj%C3%BAfur/#is) | — |
 | [Grábrók](https://www.google.com/maps/search/?api=1&query=Gr%C3%A1br%C3%B3k%20Iceland) | **GRAU-brouk** | [▶ Forvo-Eintrag](https://forvo.com/word/gr%C3%A1br%C3%B3k/#is) | — |
 | [Hraunfossar](https://www.google.com/maps/search/?api=1&query=Hraunfossar%20Iceland) | **HRÖIN-fos-sar** | [▶ OGG-Direktdatei](https://commons.wikimedia.org/wiki/Special:Redirect/file/Hraunfossar%20pronunciation.ogg) | [▶ lokal](Sounds/Hraunfossar.ogg) |
-| [Barnafoss](https://www.google.com/maps/search/?api=1&query=Barnafoss%20Iceland) | **BART-na-foss** | [▶ Forvo-Eintrag](https://forvo.com/word/barnafoss/#is) | — |
+| [Barnafoss](https://www.google.com/maps/search/?api=1&query=Barnafoss%20Iceland) | **BART-na-foss** | [▶ Forvo-Eintrag](https://forvo.com/word/barnafoss/#is) | [▶ lokal](Sounds/Barnafoss.ogg) |
 
 ### Tag 10 – 17.06.2026 · Glymur und Reykjavík
 
 | Isländischer Originalname | Aussprache für Deutsche | Audio | Lokal |
 |---|---|---|---|
 | [Glymur](https://www.google.com/maps/search/?api=1&query=Glymur%20Iceland) | **GLII-mür** | [▶ OGG-Direktdatei](https://commons.wikimedia.org/wiki/Special:Redirect/file/Glymur%20pronunciation.ogg) | [▶ lokal](Sounds/Glymur.ogg) |
-| [Hvalfjörður](https://www.google.com/maps/search/?api=1&query=Hvalfj%C3%B6r%C3%B0ur%20Iceland) | **KWAL-fjör-thür** | [▶ Forvo-Eintrag](https://forvo.com/word/hvalfj%C3%B6r%C3%B0ur/#is) | — |
+| [Hvalfjörður](https://www.google.com/maps/search/?api=1&query=Hvalfj%C3%B6r%C3%B0ur%20Iceland) | **KWAL-fjör-thür** | [▶ Forvo-Eintrag](https://forvo.com/word/hvalfj%C3%B6r%C3%B0ur/#is) | [▶ lokal](Sounds/Hvalfj%C3%B6r%C3%B0ur.ogg) |
 | [Reykjavík](https://www.google.com/maps/search/?api=1&query=Reykjav%C3%ADk%20Iceland) | **REI-kja-wiik** | [▶ OGG-Direktdatei](https://commons.wikimedia.org/wiki/Special:Redirect/file/Reykjav%C3%ADk%20pronunciation.ogg) | [▶ lokal](Sounds/Reykjav%C3%ADk.ogg) |
 | [Harpa](https://www.google.com/maps/search/?api=1&query=Harpa%20Reykjav%C3%ADk%20Iceland) | **HAR-pa** | [▶ Forvo-Eintrag](https://forvo.com/word/harpa/#is) | — |
 | [Sólfar (Sun Voyager)](https://www.google.com/maps/search/?api=1&query=S%C3%B3lfar%20Sun%20Voyager%20Reykjav%C3%ADk) | **SOUL-war** | [▶ Forvo-Eintrag](https://forvo.com/word/s%C3%B3lfar/#is) | — |
