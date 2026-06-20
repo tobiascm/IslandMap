@@ -7,7 +7,7 @@ Diese Liste enthält die isländischen Orts-, Landschafts- und Sehenswürdigkeit
 - **▶ OGG-Direktdatei** führt unmittelbar zu einer frei zugänglichen menschlichen Ausspracheaufnahme auf Wikimedia Commons.
 - **▶ Forvo-Eintrag** öffnet die exakte Wortseite bei Forvo. Dies wird nur verwendet, wenn keine verlässlich auffindbare, frei verlinkbare Direktdatei gefunden wurde.
 - Forvo ist nutzergeneriert: Dort bitte die Sprache **Isländisch** und möglichst einen Sprecher aus Island auswählen.
-- **▶ lokal** (Spalte *Lokal*) verweist auf eine im Ordner [`Sounds/`](Sounds) abgelegte Kopie der Aussprachedatei, die offline funktioniert. Eine lokale Kopie gibt es nur für die frei lizenzierten OGG-Dateien von Wikimedia Commons; für Forvo-Einträge steht dort **—**, weil Forvo keine direkt herunterladbare Datei verlinkt.
+- **▶ lokal** (Spalte *Lokal*) verweist auf eine im Ordner [`Sounds/`](Sounds) abgelegte Kopie der Aussprachedatei, die beim Anklicken sofort und offline abgespielt wird. Eine lokale Kopie gibt es nur dort, wo eine frei lizenzierte Aufnahme (Wikimedia Commons) existiert. Bei Einträgen, die ausschließlich über Forvo verfügbar sind, steht **—**, weil Forvo keine direkt herunterladbare bzw. frei verlinkbare Audiodatei anbietet (Seite ist durch Cloudflare und Hotlink-Schutz abgesichert).
 
 ## So liest du die Aussprache
 
@@ -46,7 +46,7 @@ Diese Liste enthält die isländischen Orts-, Landschafts- und Sehenswürdigkeit
 |---|---|---|---|
 | [Fjaðrárgljúfur](https://www.google.com/maps/search/?api=1&query=Fja%C3%B0r%C3%A1rglj%C3%BAfur%20Iceland) | **FJATH-raur-glju-wür** | [▶ Forvo-Eintrag](https://forvo.com/word/fja%C3%B0r%C3%A1rglj%C3%BAfur/#is) | — |
 | [Kirkjubæjarklaustur](https://www.google.com/maps/search/?api=1&query=Kirkjub%C3%A6jarklaustur%20Iceland) | **KIRK-jü-bai-jar-klöi-stür** | [▶ OGG-Direktdatei](https://commons.wikimedia.org/wiki/Special:Redirect/file/Is-Kirkjub%C3%A6jarklaustur%20pronunciation.ogg) | [▶ lokal](Sounds/Kirkjub%C3%A6jarklaustur.ogg) |
-| [Systrafoss](https://www.google.com/maps/search/?api=1&query=Systrafoss%20Iceland) | **SIS-tra-foss** | [▶ Forvo-Eintrag](https://forvo.com/word/systrafoss/#is) | — |
+| [Systrafoss](https://www.google.com/maps/search/?api=1&query=Systrafoss%20Iceland) | **SIS-tra-foss** | [▶ Forvo-Eintrag](https://forvo.com/word/systrafoss/#is) | [▶ lokal](Sounds/Systrafoss.ogg) |
 | [Dverghamrar](https://www.google.com/maps/search/?api=1&query=Dverghamrar%20Iceland) | **DWERG-ham-rar** | [▶ Forvo-Eintrag](https://forvo.com/word/dverghamrar/#is) | — |
 | [Lómagnúpur](https://www.google.com/maps/search/?api=1&query=L%C3%B3magn%C3%BApur%20Iceland) | **LOU-ma-knu-pür** | [▶ Forvo-Eintrag](https://forvo.com/word/l%C3%B3magn%C3%BApur/#is) | — |
 | [Skaftafell](https://www.google.com/maps/search/?api=1&query=Skaftafell%20Iceland) | **SKAF-ta-fetl** | [▶ OGG-Direktdatei](https://commons.wikimedia.org/wiki/Special:Redirect/file/Is-Skaftafell%20pronunciation.ogg) | [▶ lokal](Sounds/Skaftafell.ogg) |
@@ -123,7 +123,7 @@ Diese Liste enthält die isländischen Orts-, Landschafts- und Sehenswürdigkeit
 | [Hallgrímskirkja](https://www.google.com/maps/search/?api=1&query=Hallgr%C3%ADmskirkja%20Iceland) | **HATL-grims-kir-kja** | [▶ Forvo-Eintrag](https://forvo.com/word/hallgr%C3%ADmskirkja/#is) | — |
 | [Skólavörðustígur (Rainbow Street)](https://www.google.com/maps/search/?api=1&query=Sk%C3%B3lav%C3%B6r%C3%B0ust%C3%ADgur%20Reykjav%C3%ADk) | **SKOU-la-wör-thü-stii-gür** | [▶ Forvo-Eintrag](https://forvo.com/word/sk%C3%B3lav%C3%B6r%C3%B0ust%C3%ADgur/#is) | — |
 | [Miðborg Reykjavíkur (Innenstadt/Altstadt)](https://www.google.com/maps/search/?api=1&query=Mi%C3%B0borg%20Reykjav%C3%ADkur) | **MITH-bork REI-kja-wii-kür** | [▶ Forvo-Eintrag](https://forvo.com/word/mi%C3%B0borg%20reykjav%C3%ADkur/#is) | — |
-| [Tjörnin](https://www.google.com/maps/search/?api=1&query=Tj%C3%B6rnin%20Reykjav%C3%ADk) | **TJÖRT-nin** | [▶ Forvo-Eintrag](https://forvo.com/word/tj%C3%B6rnin/#is) | — |
+| [Tjörnin](https://www.google.com/maps/search/?api=1&query=Tj%C3%B6rnin%20Reykjav%C3%ADk) | **TJÖRT-nin** | [▶ Forvo-Eintrag](https://forvo.com/word/tj%C3%B6rnin/#is) | [▶ lokal](Sounds/Tj%C3%B6rnin.ogg) |
 | [Gamla höfnin (Alter Hafen)](https://www.google.com/maps/search/?api=1&query=Gamla%20h%C3%B6fnin%20Reykjav%C3%ADk) | **GAM-la HÖP-nin** | [▶ Forvo-Eintrag](https://forvo.com/word/gamla%20h%C3%B6fnin/#is) | — |
 | [Hamborgarabúlla Tómasar](https://www.google.com/maps/search/?api=1&query=Hamborgarab%C3%BAlla%20T%C3%B3masar%20Reykjav%C3%ADk) | **HAM-bor-ga-ra-BU-tla TOU-ma-sar** | [▶ Forvo-Eintrag](https://forvo.com/word/hamborgarab%C3%BAlla%20t%C3%B3masar/#is) | — |
 
