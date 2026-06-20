@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Island 2026 – Ausspracheführer mit Audio</title>
+<style>
+  :root{ --bg:#0f1720; --card:#16212e; --line:#27384a; --fg:#e7eef5; --mut:#8aa0b4;
+          --accent:#36c2a8; --accent2:#1d8c79; --forvo:#3b6ea5; }
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+        background:var(--bg);color:var(--fg);padding:0 0 4rem}
+  header{padding:1.6rem 1rem 1rem;max-width:920px;margin:0 auto}
+  h1{margin:0 0 .3rem;font-size:1.5rem}
+  .sub{color:var(--mut);margin:.2rem 0 1rem}
+  .legend{background:var(--card);border:1px solid var(--line);border-radius:12px;
+           padding:.8rem 1rem;font-size:.86rem;color:var(--mut)}
+  .legend b{color:var(--fg)}
+  main{max-width:920px;margin:0 auto;padding:0 1rem}
+  .day{margin:1.4rem 0}
+  h2{font-size:1.05rem;color:var(--accent);border-bottom:1px solid var(--line);
+      padding-bottom:.4rem;margin:0 0 .4rem}
+  table{width:100%;border-collapse:collapse}
+  th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;
+      color:var(--mut);font-weight:600;padding:.3rem .5rem}
+  td{padding:.55rem .5rem;border-top:1px solid var(--line);vertical-align:middle}
+  tr.playable{cursor:pointer}
+  tr.playable:hover{background:#1b2a3a}
+  tr.playing{background:#123;box-shadow:inset 3px 0 0 var(--accent)}
+  td.name{font-weight:600;white-space:nowrap}
+  td.pron{color:var(--accent);font-variant:small-caps;letter-spacing:.02em}
+  .map{text-decoration:none;opacity:.55;font-size:.85em}
+  .map:hover{opacity:1}
+  td.audio{text-align:right;width:1%;white-space:nowrap}
+  .play{display:inline-flex;align-items:center;gap:.4rem;border:0;cursor:pointer;
+         background:var(--accent2);color:#fff;border-radius:999px;padding:.32rem .8rem;
+         font:inherit;font-size:.85rem}
+  .play:hover{background:var(--accent)}
+  .play.playing{background:var(--accent)}
+  .play.playing .ico::before{content:"❚❚"}
+  .play .ico{font-size:.7rem;line-height:1}
+  tr.playing .play .ico{}
+  .forvo{display:inline-block;background:transparent;border:1px solid var(--forvo);
+          color:#9cc3e6;border-radius:999px;padding:.3rem .8rem;font-size:.85rem;text-decoration:none}
+  .forvo:hover{background:var(--forvo);color:#fff}
+  footer{max-width:920px;margin:2rem auto 0;padding:0 1rem;color:var(--mut);font-size:.8rem}
+  .pill{display:inline-block;background:var(--card);border:1px solid var(--line);
+         border-radius:999px;padding:.15rem .6rem;margin-right:.4rem;font-size:.78rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>🇮🇸 Island 2026 – Ausspracheführer</h1>
+  <p class="sub">Tippe auf eine Zeile oder den <b>Hören</b>-Knopf – die Aussprache wird sofort abgespielt, ohne dass sich eine neue Seite öffnet.</p>
+  <p><span class="pill">🔊 25 mit lokalem Audio</span><span class="pill">↗ 41 nur via Forvo</span></p>
+  <div class="legend">
+    <b>So liest du die Aussprache:</b> GROSSBUCHSTABEN = Hauptbetonung (im Isländischen die erste Silbe).
+    <b>th</b> = englisches <i>th</i> (þ stimmlos wie in <i>thing</i>, ð stimmhaft wie in <i>this</i>).
+    <b>tl/tn</b> = schnell zusammengezogen. <b>öi</b> ≈ <i>au</i>, <b>ou</b> = Gleitlaut o→u.
+    Annäherungen, keine IPA-Lautschrift.
+  </div>
+</header>
+<main>
+  <section class="day">
+    <h2>Tag 1 – 08.06.2026 · Golden Circle und Reykjadalur</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
+      <tbody>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Hverager%C3%B0i.ogg')">
+        <td class="name">Hveragerði <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hverager%C3%B0i%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">KWE-ra-ger-thi</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Hverager%C3%B0i.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Reykjadalur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Reykjadalur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">REI-kja-da-lür</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/reykjadalur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Kerið <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Keri%C3%B0%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">KER-ith</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/keri%C3%B0/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Geysir.ogg')">
+        <td class="name">Geysir <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Geysir%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">GEI-sir</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Geysir.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Strokkur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Strokkur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">STROK-kür</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/strokkur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Gullfoss.ogg')">
+        <td class="name">Gullfoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Gullfoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">GÜTL-foss</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Gullfoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="day">
+    <h2>Tag 2 – 09.06.2026 · Südküste</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
+      <tbody>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Seljalandsfoss.ogg')">
+        <td class="name">Seljalandsfoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Seljalandsfoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">SEL-ja-lands-foss</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Seljalandsfoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Gljúfrabúi <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Glj%C3%BAfrab%C3%BAi%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">KLJUW-ra-bu-i</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/glj%C3%BAfrab%C3%BAi/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Sk%C3%B3gafoss.ogg')">
+        <td class="name">Skógafoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sk%C3%B3gafoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">SKOU-ga-foss</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Sk%C3%B3gafoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Skógá <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sk%C3%B3g%C3%A1%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">SKOU-gau</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/sk%C3%B3g%C3%A1/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="day">
+    <h2>Tag 3 – 10.06.2026 · Schluchten, Basalt und Skaftafell</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
+      <tbody>
+      <tr class="forvo-only">
+        <td class="name">Fjaðrárgljúfur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Fja%C3%B0r%C3%A1rglj%C3%BAfur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">FJATH-raur-glju-wür</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/fja%C3%B0r%C3%A1rglj%C3%BAfur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Kirkjub%C3%A6jarklaustur.ogg')">
+        <td class="name">Kirkjubæjarklaustur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Kirkjub%C3%A6jarklaustur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">KIRK-jü-bai-jar-klöi-stür</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Kirkjub%C3%A6jarklaustur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Systrafoss.ogg')">
+        <td class="name">Systrafoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Systrafoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">SIS-tra-foss</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Systrafoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Dverghamrar <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Dverghamrar%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">DWERG-ham-rar</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/dverghamrar/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Lómagnúpur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=L%C3%B3magn%C3%BApur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">LOU-ma-knu-pür</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/l%C3%B3magn%C3%BApur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Skaftafell.ogg')">
+        <td class="name">Skaftafell <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Skaftafell%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">SKAF-ta-fetl</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Skaftafell.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Vatnaj%C3%B6kull.ogg')">
+        <td class="name">Vatnajökull <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Vatnaj%C3%B6kull%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">WAT-na-jö-kütl</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Vatnaj%C3%B6kull.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="day">
+    <h2>Tag 4 – 11.06.2026 · Gletscherlagune und Diamond Beach</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
+      <tbody>
+      <tr class="forvo-only">
+        <td class="name">Hofskirkja <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hofskirkja%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">HOF-skir-kja</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/hofskirkja/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/J%C3%B6kuls%C3%A1rl%C3%B3n.ogg')">
+        <td class="name">Jökulsárlón <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=J%C3%B6kuls%C3%A1rl%C3%B3n%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">JÖ-küls-aur-loun</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/J%C3%B6kuls%C3%A1rl%C3%B3n.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Breiðamerkursandur (Diamond Beach) <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Brei%C3%B0amerkursandur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">BREI-tha-mer-kür-san-dür</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/brei%C3%B0amerkursandur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="day">
+    <h2>Tag 5 – 12.06.2026 · Vestrahorn und Ostfjorde</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
+      <tbody>
+      <tr class="forvo-only">
+        <td class="name">Vestrahorn <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Vestrahorn%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">WES-tra-hortn</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/vestrahorn/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Stokksnes <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Stokksnes%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">STOKS-nes</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/stokksnes/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Austfirðir (Ostfjorde) <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Austfir%C3%B0ir%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">ÖIST-fir-thir</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/austfir%C3%B0ir/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Dj%C3%BApivogur.ogg')">
+        <td class="name">Djúpivogur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Dj%C3%BApivogur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">DJU-pi-wo-gür</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Dj%C3%BApivogur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Gufufoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Gufufoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">GÜ-wü-foss</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/gufufoss/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Sey%C3%B0isfj%C3%B6r%C3%B0ur.ogg')">
+        <td class="name">Seyðisfjörður <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sey%C3%B0isfj%C3%B6r%C3%B0ur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">SEI-this-fjör-thür</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Sey%C3%B0isfj%C3%B6r%C3%B0ur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="day">
+    <h2>Tag 6 – 13.06.2026 · Stuðlagil, Vök und Möðrudalur</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
+      <tbody>
+      <tr class="forvo-only">
+        <td class="name">Stuðlagil <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Stu%C3%B0lagil%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">STÜTH-la-gil</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/stu%C3%B0lagil/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Vök <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=V%C3%B6k%20Baths%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">WÖK</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/v%C3%B6k/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Urriðavatn <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Urri%C3%B0avatn%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">ÜR-ri-tha-watn</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/urri%C3%B0avatn/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Möðrudalur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=M%C3%B6%C3%B0rudalur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">MÖTH-rü-da-lür</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/m%C3%B6%C3%B0rudalur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="day">
+    <h2>Tag 7 – 14.06.2026 · Mývatn-Region und Wasserfälle</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
+      <tbody>
+      <tr class="forvo-only">
+        <td class="name">Hverir <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hverir%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">KWE-rir</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/hverir/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Námaskarð <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=N%C3%A1maskar%C3%B0%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">NAU-ma-skarth</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/n%C3%A1maskar%C3%B0/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Krafla.ogg')">
+        <td class="name">Krafla <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Krafla%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">KRAP-la</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Krafla.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Leirhnjúkur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Leirhnj%C3%BAkur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">LEIR-hnju-kür</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/leirhnj%C3%BAkur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Grjótagjá <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Grj%C3%B3tagj%C3%A1%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">GRJOU-ta-gjau</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/grj%C3%B3tagj%C3%A1/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Dettifoss.ogg')">
+        <td class="name">Dettifoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Dettifoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">DET-ti-foss</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Dettifoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Go%C3%B0afoss.ogg')">
+        <td class="name">Goðafoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Go%C3%B0afoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">GO-tha-foss</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Go%C3%B0afoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="day">
+    <h2>Tag 8 – 15.06.2026 · Hauganes und Tröllaskagi</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
+      <tbody>
+      <tr class="forvo-only">
+        <td class="name">Hauganes <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hauganes%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">HÖI-ga-nes</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/hauganes/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Eyjafj%C3%B6r%C3%B0ur.ogg')">
+        <td class="name">Eyjafjörður <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Eyjafj%C3%B6r%C3%B0ur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">EI-ja-fjör-thür</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Eyjafj%C3%B6r%C3%B0ur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Tröllaskagi <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Tr%C3%B6llaskagi%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">TRÖTL-a-ska-gi</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/tr%C3%B6llaskagi/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Reykjafoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Reykjafoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">REI-kja-foss</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/reykjafoss/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Fosslaug <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Fosslaug%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">FOSS-löich</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/fosslaug/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="day">
+    <h2>Tag 9 – 16.06.2026 · Kolugljúfur und Borgarfjörður</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
+      <tbody>
+      <tr class="forvo-only">
+        <td class="name">Kolugljúfur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Koluglj%C3%BAfur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">KO-lü-glju-wür</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/koluglj%C3%BAfur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Grábrók <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Gr%C3%A1br%C3%B3k%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">GRAU-brouk</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/gr%C3%A1br%C3%B3k/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Hraunfossar.ogg')">
+        <td class="name">Hraunfossar <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hraunfossar%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">HRÖIN-fos-sar</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Hraunfossar.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Barnafoss.ogg')">
+        <td class="name">Barnafoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Barnafoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">BART-na-foss</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Barnafoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="day">
+    <h2>Tag 10 – 17.06.2026 · Glymur und Reykjavík</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
+      <tbody>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Glymur.ogg')">
+        <td class="name">Glymur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Glymur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">GLII-mür</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Glymur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Hvalfj%C3%B6r%C3%B0ur.ogg')">
+        <td class="name">Hvalfjörður <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hvalfj%C3%B6r%C3%B0ur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">KWAL-fjör-thür</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Hvalfj%C3%B6r%C3%B0ur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Reykjav%C3%ADk.ogg')">
+        <td class="name">Reykjavík <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Reykjav%C3%ADk%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">REI-kja-wiik</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Reykjav%C3%ADk.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Harpa <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Harpa%20Reykjav%C3%ADk%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">HAR-pa</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/harpa/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Sólfar (Sun Voyager) <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=S%C3%B3lfar%20Sun%20Voyager%20Reykjav%C3%ADk" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">SOUL-war</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/s%C3%B3lfar/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Hallgrímskirkja <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hallgr%C3%ADmskirkja%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">HATL-grims-kir-kja</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/hallgr%C3%ADmskirkja/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Skólavörðustígur (Rainbow Street) <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sk%C3%B3lav%C3%B6r%C3%B0ust%C3%ADgur%20Reykjav%C3%ADk" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">SKOU-la-wör-thü-stii-gür</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/sk%C3%B3lav%C3%B6r%C3%B0ust%C3%ADgur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Miðborg Reykjavíkur (Innenstadt/Altstadt) <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Mi%C3%B0borg%20Reykjav%C3%ADkur" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">MITH-bork REI-kja-wii-kür</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/mi%C3%B0borg%20reykjav%C3%ADkur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Tj%C3%B6rnin.ogg')">
+        <td class="name">Tjörnin <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Tj%C3%B6rnin%20Reykjav%C3%ADk" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">TJÖRT-nin</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Tj%C3%B6rnin.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Gamla höfnin (Alter Hafen) <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Gamla%20h%C3%B6fnin%20Reykjav%C3%ADk" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">GAM-la HÖP-nin</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/gamla%20h%C3%B6fnin/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Hamborgarabúlla Tómasar <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hamborgarab%C3%BAlla%20T%C3%B3masar%20Reykjav%C3%ADk" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">HAM-bor-ga-ra-BU-tla TOU-ma-sar</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/hamborgarab%C3%BAlla%20t%C3%B3masar/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="day">
+    <h2>Tag 11 – 18.06.2026 · Esja, Reykjanes und Sandgerði</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
+      <tbody>
+      <tr class="forvo-only">
+        <td class="name">Mógilsá <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=M%C3%B3gils%C3%A1%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">MOU-jil-sau</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/m%C3%B3gils%C3%A1/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Esja <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Esja%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">ES-ja</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/esja/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Steinn <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Steinn%20Esja%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">STEITN</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/steinn/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Sýlingarfell <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=S%C3%BDlingarfell%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">SII-ling-ar-fetl</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/s%C3%BDlingarfell/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Grindav%C3%ADk.ogg')">
+        <td class="name">Grindavík <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Grindav%C3%ADk%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">GRIN-da-wiik</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Grindav%C3%ADk.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Reykjanes.ogg')">
+        <td class="name">Reykjanes <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Reykjanes%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">REI-kja-nes</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Reykjanes.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Gunnuhver <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Gunnuhver%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">GÜN-nü-kwer</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/gunnuhver/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="forvo-only">
+        <td class="name">Reykjanesviti <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Reykjanesviti%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">REI-kja-nes-wii-ti</td>
+        <td class="audio"><a class="forvo" href="https://forvo.com/word/reykjanesviti/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Sandger%C3%B0i.ogg')">
+        <td class="name">Sandgerði <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sandger%C3%B0i%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
+        <td class="pron">SANT-kjer-thi</td>
+        <td class="audio"><button class="play" onclick="play(this,'Sounds/Sandger%C3%B0i.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+<footer>
+  <p>Audiodateien: frei lizenzierte Aufnahmen (Wikimedia Commons) im Ordner <code>Sounds/</code>.
+  Einträge mit „Forvo ↗" haben keine frei verlinkbare Datei und öffnen die Forvo-Wortseite in einem neuen Tab.</p>
+  <p><b>Hinweis:</b> Die lokalen Dateien sind im OGG-Format. Chrome, Firefox und Edge spielen sie direkt ab; iOS-Safari unterstützt OGG nicht.</p>
+</footer>
+<script>
+  var cur=null, curBtn=null;
+  function clearAll(){
+    document.querySelectorAll('.play.playing').forEach(function(b){b.classList.remove('playing');});
+    document.querySelectorAll('tr.playing').forEach(function(t){t.classList.remove('playing');});
+  }
+  function play(btn, src){
+    if(cur && curBtn===btn && !cur.paused){ cur.pause(); clearAll(); return; }
+    if(cur){ cur.pause(); }
+    clearAll();
+    cur=new Audio(src); curBtn=btn;
+    btn.classList.add('playing');
+    var tr=btn.closest('tr'); if(tr) tr.classList.add('playing');
+    cur.play().catch(function(e){ clearAll(); alert('Konnte Audio nicht abspielen: '+e.message); });
+    cur.onended=function(){ clearAll(); };
+  }
+</script>
+</body>
+</html>
