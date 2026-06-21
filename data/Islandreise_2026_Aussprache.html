@@ -37,9 +37,9 @@
          font:inherit;font-size:.85rem}
   .play:hover{background:var(--accent)}
   .play.playing{background:var(--accent)}
-  .play.playing .ico::before{content:"❚❚"}
+  .play.playing .ico::before{content:"\275A\275A";letter-spacing:-2px}
+  .play.playing .ico>span{display:none}
   .play .ico{font-size:.7rem;line-height:1}
-  tr.playing .play .ico{}
   .forvo{display:inline-block;background:transparent;border:1px solid var(--forvo);
           color:#9cc3e6;border-radius:999px;padding:.3rem .8rem;font-size:.85rem;text-decoration:none}
   .forvo:hover{background:var(--forvo);color:#fff}
@@ -66,10 +66,10 @@
     <table>
       <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
       <tbody>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Hverager%C3%B0i.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Hverager%C3%B0i.ogg',event)">
         <td class="name">Hveragerði <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hverager%C3%B0i%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">KWE-ra-ger-thi</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Hverager%C3%B0i.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Hverager%C3%B0i.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Reykjadalur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Reykjadalur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
@@ -81,20 +81,20 @@
         <td class="pron">KER-ith</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/keri%C3%B0/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Geysir.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Geysir.ogg',event)">
         <td class="name">Geysir <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Geysir%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">GEI-sir</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Geysir.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Geysir.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Strokkur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Strokkur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">STROK-kür</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/strokkur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Gullfoss.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Gullfoss.ogg',event)">
         <td class="name">Gullfoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Gullfoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">GÜTL-foss</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Gullfoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Gullfoss.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       </tbody>
     </table>
@@ -104,20 +104,20 @@
     <table>
       <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
       <tbody>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Seljalandsfoss.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Seljalandsfoss.ogg',event)">
         <td class="name">Seljalandsfoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Seljalandsfoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">SEL-ja-lands-foss</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Seljalandsfoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Seljalandsfoss.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Gljúfrabúi <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Glj%C3%BAfrab%C3%BAi%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">KLJUW-ra-bu-i</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/glj%C3%BAfrab%C3%BAi/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Sk%C3%B3gafoss.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Sk%C3%B3gafoss.ogg',event)">
         <td class="name">Skógafoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sk%C3%B3gafoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">SKOU-ga-foss</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Sk%C3%B3gafoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Sk%C3%B3gafoss.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Skógá <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sk%C3%B3g%C3%A1%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
@@ -137,15 +137,15 @@
         <td class="pron">FJATH-raur-glju-wür</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/fja%C3%B0r%C3%A1rglj%C3%BAfur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Kirkjub%C3%A6jarklaustur.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Kirkjub%C3%A6jarklaustur.ogg',event)">
         <td class="name">Kirkjubæjarklaustur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Kirkjub%C3%A6jarklaustur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">KIRK-jü-bai-jar-klöi-stür</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Kirkjub%C3%A6jarklaustur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Kirkjub%C3%A6jarklaustur.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Systrafoss.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Systrafoss.ogg',event)">
         <td class="name">Systrafoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Systrafoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">SIS-tra-foss</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Systrafoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Systrafoss.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Dverghamrar <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Dverghamrar%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
@@ -157,15 +157,15 @@
         <td class="pron">LOU-ma-knu-pür</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/l%C3%B3magn%C3%BApur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Skaftafell.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Skaftafell.ogg',event)">
         <td class="name">Skaftafell <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Skaftafell%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">SKAF-ta-fetl</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Skaftafell.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Skaftafell.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Vatnaj%C3%B6kull.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Vatnaj%C3%B6kull.ogg',event)">
         <td class="name">Vatnajökull <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Vatnaj%C3%B6kull%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">WAT-na-jö-kütl</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Vatnaj%C3%B6kull.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Vatnaj%C3%B6kull.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       </tbody>
     </table>
@@ -180,10 +180,10 @@
         <td class="pron">HOF-skir-kja</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/hofskirkja/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/J%C3%B6kuls%C3%A1rl%C3%B3n.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/J%C3%B6kuls%C3%A1rl%C3%B3n.ogg',event)">
         <td class="name">Jökulsárlón <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=J%C3%B6kuls%C3%A1rl%C3%B3n%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">JÖ-küls-aur-loun</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/J%C3%B6kuls%C3%A1rl%C3%B3n.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/J%C3%B6kuls%C3%A1rl%C3%B3n.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Breiðamerkursandur (Diamond Beach) <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Brei%C3%B0amerkursandur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
@@ -213,20 +213,20 @@
         <td class="pron">ÖIST-fir-thir</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/austfir%C3%B0ir/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Dj%C3%BApivogur.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Dj%C3%BApivogur.ogg',event)">
         <td class="name">Djúpivogur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Dj%C3%BApivogur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">DJU-pi-wo-gür</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Dj%C3%BApivogur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Dj%C3%BApivogur.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Gufufoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Gufufoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">GÜ-wü-foss</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/gufufoss/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Sey%C3%B0isfj%C3%B6r%C3%B0ur.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Sey%C3%B0isfj%C3%B6r%C3%B0ur.ogg',event)">
         <td class="name">Seyðisfjörður <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sey%C3%B0isfj%C3%B6r%C3%B0ur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">SEI-this-fjör-thür</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Sey%C3%B0isfj%C3%B6r%C3%B0ur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Sey%C3%B0isfj%C3%B6r%C3%B0ur.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       </tbody>
     </table>
@@ -274,10 +274,10 @@
         <td class="pron">NAU-ma-skarth</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/n%C3%A1maskar%C3%B0/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Krafla.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Krafla.ogg',event)">
         <td class="name">Krafla <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Krafla%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">KRAP-la</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Krafla.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Krafla.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Leirhnjúkur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Leirhnj%C3%BAkur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
@@ -289,15 +289,15 @@
         <td class="pron">GRJOU-ta-gjau</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/grj%C3%B3tagj%C3%A1/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Dettifoss.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Dettifoss.ogg',event)">
         <td class="name">Dettifoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Dettifoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">DET-ti-foss</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Dettifoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Dettifoss.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Go%C3%B0afoss.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Go%C3%B0afoss.ogg',event)">
         <td class="name">Goðafoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Go%C3%B0afoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">GO-tha-foss</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Go%C3%B0afoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Go%C3%B0afoss.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       </tbody>
     </table>
@@ -312,10 +312,10 @@
         <td class="pron">HÖI-ga-nes</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/hauganes/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Eyjafj%C3%B6r%C3%B0ur.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Eyjafj%C3%B6r%C3%B0ur.ogg',event)">
         <td class="name">Eyjafjörður <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Eyjafj%C3%B6r%C3%B0ur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">EI-ja-fjör-thür</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Eyjafj%C3%B6r%C3%B0ur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Eyjafj%C3%B6r%C3%B0ur.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Tröllaskagi <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Tr%C3%B6llaskagi%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
@@ -350,15 +350,15 @@
         <td class="pron">GRAU-brouk</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/gr%C3%A1br%C3%B3k/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Hraunfossar.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Hraunfossar.ogg',event)">
         <td class="name">Hraunfossar <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hraunfossar%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">HRÖIN-fos-sar</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Hraunfossar.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Hraunfossar.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Barnafoss.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Barnafoss.ogg',event)">
         <td class="name">Barnafoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Barnafoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">BART-na-foss</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Barnafoss.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Barnafoss.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       </tbody>
     </table>
@@ -368,20 +368,20 @@
     <table>
       <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
       <tbody>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Glymur.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Glymur.ogg',event)">
         <td class="name">Glymur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Glymur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">GLII-mür</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Glymur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Glymur.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Hvalfj%C3%B6r%C3%B0ur.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Hvalfj%C3%B6r%C3%B0ur.ogg',event)">
         <td class="name">Hvalfjörður <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hvalfj%C3%B6r%C3%B0ur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">KWAL-fjör-thür</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Hvalfj%C3%B6r%C3%B0ur.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Hvalfj%C3%B6r%C3%B0ur.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Reykjav%C3%ADk.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Reykjav%C3%ADk.ogg',event)">
         <td class="name">Reykjavík <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Reykjav%C3%ADk%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">REI-kja-wiik</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Reykjav%C3%ADk.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Reykjav%C3%ADk.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Harpa <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Harpa%20Reykjav%C3%ADk%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
@@ -408,10 +408,10 @@
         <td class="pron">MITH-bork REI-kja-wii-kür</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/mi%C3%B0borg%20reykjav%C3%ADkur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Tj%C3%B6rnin.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Tj%C3%B6rnin.ogg',event)">
         <td class="name">Tjörnin <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Tj%C3%B6rnin%20Reykjav%C3%ADk" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">TJÖRT-nin</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Tj%C3%B6rnin.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Tj%C3%B6rnin.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Gamla höfnin (Alter Hafen) <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Gamla%20h%C3%B6fnin%20Reykjav%C3%ADk" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
@@ -451,15 +451,15 @@
         <td class="pron">SII-ling-ar-fetl</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/s%C3%BDlingarfell/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Grindav%C3%ADk.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Grindav%C3%ADk.ogg',event)">
         <td class="name">Grindavík <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Grindav%C3%ADk%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">GRIN-da-wiik</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Grindav%C3%ADk.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Grindav%C3%ADk.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Reykjanes.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Reykjanes.ogg',event)">
         <td class="name">Reykjanes <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Reykjanes%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">REI-kja-nes</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Reykjanes.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Reykjanes.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       <tr class="forvo-only">
         <td class="name">Gunnuhver <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Gunnuhver%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
@@ -471,10 +471,10 @@
         <td class="pron">REI-kja-nes-wii-ti</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/reykjanesviti/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
-      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Sandger%C3%B0i.ogg')">
+      <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Sandger%C3%B0i.ogg',event)">
         <td class="name">Sandgerði <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sandger%C3%B0i%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">SANT-kjer-thi</td>
-        <td class="audio"><button class="play" onclick="play(this,'Sounds/Sandger%C3%B0i.ogg')" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Sandger%C3%B0i.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
       </tbody>
     </table>
@@ -483,23 +483,41 @@
 <footer>
   <p>Audiodateien: frei lizenzierte Aufnahmen (Wikimedia Commons) im Ordner <code>Sounds/</code>.
   Einträge mit „Forvo ↗" haben keine frei verlinkbare Datei und öffnen die Forvo-Wortseite in einem neuen Tab.</p>
-  <p><b>Hinweis:</b> Die lokalen Dateien sind im OGG-Format. Chrome, Firefox und Edge spielen sie direkt ab; iOS-Safari unterstützt OGG nicht.</p>
+  <p><b>Hinweis:</b> Die lokalen Dateien sind im OGG-Format (Chrome, Firefox, Edge, Android). iOS-Safari unterstützt OGG nicht.</p>
 </footer>
 <script>
-  var cur=null, curBtn=null;
-  function clearAll(){
-    document.querySelectorAll('.play.playing').forEach(function(b){b.classList.remove('playing');});
-    document.querySelectorAll('tr.playing').forEach(function(t){t.classList.remove('playing');});
+  // Ein einziges, wiederverwendetes Audio-Element vermeidet ueberlappende play()/pause()-Konflikte.
+  var audio = new Audio();
+  var curBtn = null;
+  audio.addEventListener('ended', clearActive);
+
+  function clearActive(){
+    document.querySelectorAll('.play.playing').forEach(function(b){ b.classList.remove('playing'); });
+    document.querySelectorAll('tr.playing').forEach(function(t){ t.classList.remove('playing'); });
   }
-  function play(btn, src){
-    if(cur && curBtn===btn && !cur.paused){ cur.pause(); clearAll(); return; }
-    if(cur){ cur.pause(); }
-    clearAll();
-    cur=new Audio(src); curBtn=btn;
+
+  function play(btn, src, ev){
+    if (ev) { ev.stopPropagation(); }          // verhindert doppeltes Ausloesen (Knopf + Zeile)
+    // Gleicher Knopf und laeuft gerade -> stoppen (Toggle)
+    if (curBtn === btn && !audio.paused) {
+      audio.pause();
+      clearActive();
+      curBtn = null;
+      return;
+    }
+    clearActive();
+    curBtn = btn;
     btn.classList.add('playing');
-    var tr=btn.closest('tr'); if(tr) tr.classList.add('playing');
-    cur.play().catch(function(e){ clearAll(); alert('Konnte Audio nicht abspielen: '+e.message); });
-    cur.onended=function(){ clearAll(); };
+    var tr = btn.closest('tr'); if (tr) { tr.classList.add('playing'); }
+    audio.src = src;                            // Quelle wechseln; alter play()-Promise bricht als AbortError ab
+    var p = audio.play();
+    if (p && p.catch) {
+      p.catch(function(e){
+        if (e && e.name === 'AbortError') { return; }   // harmlos: durch neue Auswahl unterbrochen
+        clearActive(); curBtn = null;
+        alert('Konnte Audio nicht abspielen: ' + e.message);
+      });
+    }
   }
 </script>
 </body>
