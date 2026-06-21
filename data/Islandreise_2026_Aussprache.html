@@ -6,7 +6,7 @@
 <title>Island 2026 – Ausspracheführer mit Audio</title>
 <style>
   :root{ --bg:#0f1720; --card:#16212e; --line:#27384a; --fg:#e7eef5; --mut:#8aa0b4;
-          --accent:#36c2a8; --accent2:#1d8c79; --forvo:#3b6ea5; }
+          --accent:#36c2a8; --accent2:#1d8c79; --forvo:#3b6ea5; --camp:#caa45a; }
   *{box-sizing:border-box}
   body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
         background:var(--bg);color:var(--fg);padding:0 0 4rem}
@@ -43,6 +43,12 @@
   .forvo{display:inline-block;background:transparent;border:1px solid var(--forvo);
           color:#9cc3e6;border-radius:999px;padding:.3rem .8rem;font-size:.85rem;text-decoration:none}
   .forvo:hover{background:var(--forvo);color:#fff}
+  tr.camp{background:rgba(202,164,90,.07)}
+  tr.camp td.name{white-space:normal;color:#f0e3c8}
+  tr.camp td.pron{color:var(--camp)}
+  .camp-badge{margin-right:.15rem}
+  .cap{display:inline-block;color:var(--mut);font-weight:400;font-size:.72rem;text-transform:uppercase;letter-spacing:.03em}
+  .tent{opacity:.7}
   footer{max-width:920px;margin:2rem auto 0;padding:0 1rem;color:var(--mut);font-size:.8rem}
   .pill{display:inline-block;background:var(--card);border:1px solid var(--line);
          border-radius:999px;padding:.15rem .6rem;margin-right:.4rem;font-size:.78rem}
@@ -51,8 +57,8 @@
 <body>
 <header>
   <h1>🇮🇸 Island 2026 – Ausspracheführer</h1>
-  <p class="sub">Tippe auf eine Zeile oder den <b>Hören</b>-Knopf – die Aussprache wird sofort abgespielt, ohne dass sich eine neue Seite öffnet.</p>
-  <p><span class="pill">🔊 25 mit lokalem Audio</span><span class="pill">↗ 41 nur via Forvo</span></p>
+  <p class="sub">Tippe auf eine Zeile oder den <b>Hören</b>-Knopf – die Aussprache wird sofort abgespielt, ohne dass sich eine neue Seite öffnet. 🏕️-Zeilen zeigen die Übernachtung des jeweiligen Tages.</p>
+  <p><span class="pill">🔊 25 mit lokalem Audio</span><span class="pill">↗ 41 nur via Forvo</span><span class="pill">🏕️ 12 Campingplätze</span></p>
   <div class="legend">
     <b>So liest du die Aussprache:</b> GROSSBUCHSTABEN = Hauptbetonung (im Isländischen die erste Silbe).
     <b>th</b> = englisches <i>th</i> (þ stimmlos wie in <i>thing</i>, ð stimmhaft wie in <i>this</i>).
@@ -66,6 +72,11 @@
     <table>
       <thead><tr><th>Name</th><th>Aussprache</th><th>Hören</th></tr></thead>
       <tbody>
+      <tr class="camp">
+        <td class="name"><span class="camp-badge">🏕️</span> Mosskógar Camping<br><small class="cap">Anreise-Nacht · 07 → 08.06.</small></td>
+        <td class="pron">MOSS-kou-gar</td>
+        <td class="audio"><span class="tent">🏕️</span></td>
+      </tr>
       <tr class="playable" onclick="play(this.querySelector('.play'),'Sounds/Hverager%C3%B0i.ogg',event)">
         <td class="name">Hveragerði <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hverager%C3%B0i%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">KWE-ra-ger-thi</td>
@@ -96,6 +107,11 @@
         <td class="pron">GÜTL-foss</td>
         <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Gullfoss.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
+      <tr class="camp">
+        <td class="name"><span class="camp-badge">🏕️</span> Flúðir Camping<br><small class="cap">Übernachtung · Nacht nach Tag 1</small></td>
+        <td class="pron">FLU-thir</td>
+        <td class="audio"><span class="tent">🏕️</span></td>
+      </tr>
       </tbody>
     </table>
   </section>
@@ -123,6 +139,11 @@
         <td class="name">Skógá <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sk%C3%B3g%C3%A1%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">SKOU-gau</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/sk%C3%B3g%C3%A1/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="camp">
+        <td class="name"><span class="camp-badge">🏕️</span> Vík Campsite<br><small class="cap">Übernachtung · Nacht nach Tag 2</small></td>
+        <td class="pron">WIIK</td>
+        <td class="audio"><span class="tent">🏕️</span></td>
       </tr>
       </tbody>
     </table>
@@ -167,6 +188,11 @@
         <td class="pron">WAT-na-jö-kütl</td>
         <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Vatnaj%C3%B6kull.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
+      <tr class="camp">
+        <td class="name"><span class="camp-badge">🏕️</span> Svínafell Camping<br><small class="cap">Übernachtung · Nacht nach Tag 3</small></td>
+        <td class="pron">SWII-na-fetl</td>
+        <td class="audio"><span class="tent">🏕️</span></td>
+      </tr>
       </tbody>
     </table>
   </section>
@@ -189,6 +215,11 @@
         <td class="name">Breiðamerkursandur (Diamond Beach) <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Brei%C3%B0amerkursandur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">BREI-tha-mer-kür-san-dür</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/brei%C3%B0amerkursandur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="camp">
+        <td class="name"><span class="camp-badge">🏕️</span> Myllulækur Campsite (bei Höfn)<br><small class="cap">Übernachtung · Nacht nach Tag 4</small></td>
+        <td class="pron">MIT-lü-lai-kür · Höfn: HÖPN</td>
+        <td class="audio"><span class="tent">🏕️</span></td>
       </tr>
       </tbody>
     </table>
@@ -228,6 +259,11 @@
         <td class="pron">SEI-this-fjör-thür</td>
         <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Sey%C3%B0isfj%C3%B6r%C3%B0ur.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
+      <tr class="camp playable" onclick="play(this.querySelector('.play'),'Sounds/Sey%C3%B0isfj%C3%B6r%C3%B0ur.ogg',event)">
+        <td class="name"><span class="camp-badge">🏕️</span> Seyðisfjörður Campsite<br><small class="cap">Übernachtung · Nacht nach Tag 5</small></td>
+        <td class="pron">SEI-this-fjör-thür</td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Sey%C3%B0isfj%C3%B6r%C3%B0ur.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
       </tbody>
     </table>
   </section>
@@ -255,6 +291,11 @@
         <td class="name">Möðrudalur <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=M%C3%B6%C3%B0rudalur%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">MÖTH-rü-da-lür</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/m%C3%B6%C3%B0rudalur/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
+      </tr>
+      <tr class="camp">
+        <td class="name"><span class="camp-badge">🏕️</span> Möðrudalur / Fjalladýrð Camping<br><small class="cap">Übernachtung · Nacht nach Tag 6</small></td>
+        <td class="pron">MÖTH-rü-da-lür / FJATL-a-dirth</td>
+        <td class="audio"><span class="tent">🏕️</span></td>
       </tr>
       </tbody>
     </table>
@@ -299,6 +340,11 @@
         <td class="pron">GO-tha-foss</td>
         <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Go%C3%B0afoss.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
+      <tr class="camp">
+        <td class="name"><span class="camp-badge">🏕️</span> Hamrar Camping (Akureyri)<br><small class="cap">Übernachtung · Nacht nach Tag 7</small></td>
+        <td class="pron">HAM-rar · Akureyri: A-kü-rei-ri</td>
+        <td class="audio"><span class="tent">🏕️</span></td>
+      </tr>
       </tbody>
     </table>
   </section>
@@ -332,6 +378,11 @@
         <td class="pron">FOSS-löich</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/fosslaug/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
+      <tr class="camp">
+        <td class="name"><span class="camp-badge">🏕️</span> Varmahlíð Camping<br><small class="cap">Übernachtung · Nacht nach Tag 8</small></td>
+        <td class="pron">WAR-ma-hlith</td>
+        <td class="audio"><span class="tent">🏕️</span></td>
+      </tr>
       </tbody>
     </table>
   </section>
@@ -359,6 +410,11 @@
         <td class="name">Barnafoss <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Barnafoss%20Iceland" target="_blank" rel="noopener" title="Auf Karte zeigen" onclick="event.stopPropagation()">📍</a></td>
         <td class="pron">BART-na-foss</td>
         <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Barnafoss.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
+      <tr class="camp">
+        <td class="name"><span class="camp-badge">🏕️</span> Borgarnes Camping<br><small class="cap">Übernachtung · Nacht nach Tag 9</small></td>
+        <td class="pron">BOR-gar-nes</td>
+        <td class="audio"><span class="tent">🏕️</span></td>
       </tr>
       </tbody>
     </table>
@@ -423,6 +479,11 @@
         <td class="pron">HAM-bor-ga-ra-BU-tla TOU-ma-sar</td>
         <td class="audio"><a class="forvo" href="https://forvo.com/word/hamborgarab%C3%BAlla%20t%C3%B3masar/#is" target="_blank" rel="noopener">Forvo ↗</a></td>
       </tr>
+      <tr class="camp">
+        <td class="name"><span class="camp-badge">🏕️</span> Mosskógar Camping<br><small class="cap">Übernachtung · Nacht nach Tag 10</small></td>
+        <td class="pron">MOSS-kou-gar</td>
+        <td class="audio"><span class="tent">🏕️</span></td>
+      </tr>
       </tbody>
     </table>
   </section>
@@ -476,44 +537,41 @@
         <td class="pron">SANT-kjer-thi</td>
         <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Sandger%C3%B0i.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
       </tr>
+      <tr class="camp playable" onclick="play(this.querySelector('.play'),'Sounds/Sandger%C3%B0i.ogg',event)">
+        <td class="name"><span class="camp-badge">🏕️</span> Sandgerði Camping<br><small class="cap">Übernachtung · Nacht nach Tag 11</small></td>
+        <td class="pron">SANT-kjer-thi</td>
+        <td class="audio"><button class="play" type="button" onclick="play(this,'Sounds/Sandger%C3%B0i.ogg',event)" aria-label="Aussprache abspielen"><span class="ico">▶</span><span class="lbl">Hören</span></button></td>
+      </tr>
       </tbody>
     </table>
   </section>
 </main>
 <footer>
   <p>Audiodateien: frei lizenzierte Aufnahmen (Wikimedia Commons) im Ordner <code>Sounds/</code>.
-  Einträge mit „Forvo ↗" haben keine frei verlinkbare Datei und öffnen die Forvo-Wortseite in einem neuen Tab.</p>
+  Einträge mit „Forvo ↗" haben keine frei verlinkbare Datei und öffnen die Forvo-Wortseite in einem neuen Tab.
+  🏕️-Zeilen stammen aus der Übernachtungstabelle der Reise-Highlights.</p>
   <p><b>Hinweis:</b> Die lokalen Dateien sind im OGG-Format (Chrome, Firefox, Edge, Android). iOS-Safari unterstützt OGG nicht.</p>
 </footer>
 <script>
-  // Ein einziges, wiederverwendetes Audio-Element vermeidet ueberlappende play()/pause()-Konflikte.
   var audio = new Audio();
   var curBtn = null;
   audio.addEventListener('ended', clearActive);
-
   function clearActive(){
     document.querySelectorAll('.play.playing').forEach(function(b){ b.classList.remove('playing'); });
     document.querySelectorAll('tr.playing').forEach(function(t){ t.classList.remove('playing'); });
   }
-
   function play(btn, src, ev){
-    if (ev) { ev.stopPropagation(); }          // verhindert doppeltes Ausloesen (Knopf + Zeile)
-    // Gleicher Knopf und laeuft gerade -> stoppen (Toggle)
-    if (curBtn === btn && !audio.paused) {
-      audio.pause();
-      clearActive();
-      curBtn = null;
-      return;
-    }
+    if (ev) { ev.stopPropagation(); }
+    if (curBtn === btn && !audio.paused) { audio.pause(); clearActive(); curBtn = null; return; }
     clearActive();
     curBtn = btn;
     btn.classList.add('playing');
     var tr = btn.closest('tr'); if (tr) { tr.classList.add('playing'); }
-    audio.src = src;                            // Quelle wechseln; alter play()-Promise bricht als AbortError ab
+    audio.src = src;
     var p = audio.play();
     if (p && p.catch) {
       p.catch(function(e){
-        if (e && e.name === 'AbortError') { return; }   // harmlos: durch neue Auswahl unterbrochen
+        if (e && e.name === 'AbortError') { return; }
         clearActive(); curBtn = null;
         alert('Konnte Audio nicht abspielen: ' + e.message);
       });
